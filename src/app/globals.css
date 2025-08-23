@@ -11,12 +11,12 @@
   --light-gray: #E6E6E6;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1a1a1a;
+    --background: #ffffff;
     --foreground: #ffffff;
   }
-}
+} */
 
 body {
   background: var(--background);
@@ -278,7 +278,7 @@ body {
     transform: scale(0.9);
   }
   to {
-    opacity: 极1;
+    opacity: 1;
     transform: scale(1);
   }
 }
@@ -306,7 +306,7 @@ body {
 }
 
 .animate-fade-in-up {
-  animation: fadeIn极Up 0.8s ease-out;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .animate-fade-in-scale {
@@ -333,10 +333,10 @@ body {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-hover:hover {
+/* .card-hover:hover {
   transform: translateY(-8px);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-}
+} */
 
 /* Gradient text */
 .text-gradient {

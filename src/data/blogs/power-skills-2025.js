@@ -23,12 +23,12 @@ export const powerSkillsBlog = {
       <div class="mb-12">
         <div class="bg-gradient-to-br from-blue-800 to-purple-700 rounded-2xl p-8 text-center relative overflow-hidden mb-8">
           <div class="text-6xl mb-4">🎓</div>
-          <div class="text-4xl mb-2">📚</div>
-          <div class="flex justify-center space-x-3 text-xl">
-            <span class="text-blue-300">💻</span>
-            <span class="text-yellow-300">🔍</span>
-            <span class="text-green-300">💬</span>
-          </div>
+          // <div class="text-4xl mb-2">📚</div>
+          // <div class="flex justify-center space-x-3 text-xl">
+          //   <span class="text-blue-300">💻</span>
+          //   <span class="text-yellow-300">🔍</span>
+          //   <span class="text-green-300">💬</span>
+          // </div>
           <div class="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent"></div>
         </div>
       </div>

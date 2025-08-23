@@ -15,7 +15,7 @@ export default function Home() {
         <meta name="description" content="Grow your business with our digital marketing solutions." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-white min-h-screen">
+      <div className="bg-[#ffffff] min-h-screen">
         <Hero />
         <Impact />
         <TiltCardSection />

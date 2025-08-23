@@ -56,12 +56,12 @@ export default function Header() {
   return (
     <div className="fixed top-0 left-0 z-50 w-full">
       {/* Fixed Header */}
-      <header className="py-4 md:py-5 bg-slate-900/40 backdrop-blur supports-[backdrop-filter]:bg-slate-900/40 text-white border-b border-white/10">
+      <header className="py-4 md:py-5 backdrop-blur text-red-700">
         <div className="flex items-center w-11/12 mx-auto gap-6">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
             {/* <img src="/brandico.png" alt="Trendy Vibe logo" className="h-8 w-8 rounded" /> */}
-            <span className="text-xl md:text-2xl font-extrabold tracking-tight">Trendy Vibe</span>
+            <span className="text-xl md:text-2xl font-extrabold tracking-tight">Trendy Vibes</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -78,7 +78,7 @@ export default function Header() {
                 key={id}
                 href={href}
                 className={`transition-all duration-300 relative hover:text-white ${
-                  pathname === href ? "text-white" : "text-white/80"
+                  pathname === href ? "text-red-700 font-extrabold" : "text-red-500 font-bold"
                 } ${
                   clickedElement === id
                     ? "button-click-animation text-coral-pink scale-95"
@@ -104,7 +104,7 @@ export default function Header() {
                 <path d="M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm10 2-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            <Link href="/lets-talk" className="px-4 py-2 rounded-xl bg-white text-slate-900 font-semibold hover:bg-slate-100 transition">Get Started</Link>
+            <Link href="/lets-talk" className="px-4 py-2 rounded-xl bg-white text-red-600 font-semibold hover:bg-slate-100 transition">Get Started</Link>
           </div>
 
           {/* Mobile Hamburger */}

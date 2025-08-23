@@ -29,17 +29,27 @@ export default function FAQ() {
       style={{ backgroundColor: "#EEEEEE" }}
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-800">
-          Frequently Asked Questions
-        </h2>
+        <div className="flex items-center justify-center gap-6 mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+            Frequently Asked Questions
+          </h2>
+          
+          {/* Ball decoration image */}
+          <img 
+            src="/ball.png" 
+            alt="Decorative ball" 
+            className="w-16 h-16 md:w-20 md:h-20 object-contain filter drop-shadow-lg animate-spin"
+            style={{ animationDuration: '8s' }}
+          />
+        </div>
 
         <div className="space-y-8 mb-20">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white backdrop-blur-sm rounded-xl p-8 border border-gray-200 transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 hover:shadow-2xl hover:shadow-gray-300/60 hover:border-gray-300"
+              className="bg-[#ffffff] backdrop-blur-sm rounded-xl p-8 border border-gray-200 transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 hover:shadow-2xl hover:shadow-gray-300/60 hover:border-gray-300"
             >
-              <h3 className="text-xl font-semibold text-red-300 mb-3">
+              <h3 className="text-xl font-semibold text-red-600 mb-3">
                 {faq.question}
               </h3>
               <p className="text-gray-700 leading-relaxed">{faq.answer}</p>

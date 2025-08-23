@@ -60,8 +60,14 @@ export default function HeroSection() {
 
 	return (
 		<section
-			className="relative min-h-screen flex items-center justify-center text-white px-6 pt-28 md:pt-36 pb-12 md:pb-20 xl:pb-28 overflow-hidden"
-			style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+			className="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
+			style={{ 
+				backgroundImage: "url('/hero-bg.jpg')", 
+				backgroundSize: 'cover', 
+				backgroundPosition: 'center',
+				marginTop: '-80px',
+				paddingTop: '80px'
+			}}
 			onMouseMove={handleMouseMove}
 		>
 			{/* Left Overlay Image with mouse interaction */}
@@ -72,7 +78,7 @@ export default function HeroSection() {
 				}}
 			>
 				<img
-					src="/hero-overlay.png"
+					src="/h1-rendering.png"
 					alt="Decorative overlay"
 					className="w-28 sm:w-36 md:w-44 lg:w-52 opacity-90 mix-blend-screen drop-shadow-xl select-none"
 					onError={handleOverlayError}
@@ -93,22 +99,22 @@ export default function HeroSection() {
 				<div className="grid grid-cols-1 gap-6 md:gap-10 items-center justify-items-center text-center">
 					{/* Centered Content */}
 					<div className="space-y-6 md:space-y-8">
-						<div className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-							<span className="text-[10px] md:text-xs text-white/90 tracking-wider font-medium flex items-center gap-2">
-								<span className="text-coral-pink">★</span>
-								Digital Marketing Agency
-							</span>
+						<div className="inline-fle">
+							{/* <span className="text-[10px] md:text-xs text-white/90 tracking-wider font-medium flex items-center gap-2"> */}
+								{/* <span className="text-coral-pink ">★</span> */}
+								{/* Digital Marketing Agency */}
+							{/* </span> */}
 						</div>
 
 						<div className="space-y-3 md:space-y-4">
-							<h1 className="font-extrabold leading-[0.95] tracking-tight p-0 text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[7.5rem]">
+							<h1 className="font-extrabold leading-[0.95] tracking-tight p-0 text-[2.6rem] sm:text-6xl md:text-5xl lg:text-[7.5rem]">
 								<span className="block text-white">Grow Faster Through</span>
 								<span className="block text-white">Smarter <span className="text-coral-pink">Marketing</span></span>
 							</h1>
 						</div>
 
 						<p className="text-base sm:text-xl md:text-2xl text-white/85 max-w-4xl mx-auto leading-relaxed font-light">
-							Elevate your business by aligning creativity with data driven marketing.
+							Elevate your business by aligning creativity with data driven marketing .
 						</p>
 
 						<div className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-8 justify-center">
@@ -125,9 +131,9 @@ export default function HeroSection() {
 							</button>
 						</div>
 
-						<div className="grid grid-cols-3 gap-4 md:gap-8 pt-8 md:pt-12 border-t border-white/20 max-w-3xl mx-auto">
+						<div className="grid grid-cols-3 gap-4 md:gap-8 pt-8 pb-16 md:pt-12 border-t border-white/20 max-w-3xl mx-auto">
 							<div className="text-center">
-								<div className="text-lg sm:text-xl md:text-3xl font-bold text-coral-pink mb-1">300%</div>
+								<div className="text-lg sm:text-xl md:text-3xl font-bold text-coral-pink mb-3">300%</div>
 								<div className="text-[10px] sm:text-xs text-light-gray uppercase tracking-wider font-medium">Avg. ROI</div>
 							</div>
 							<div className="text-center">

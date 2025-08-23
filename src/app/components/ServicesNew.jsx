@@ -67,7 +67,7 @@ export default function ServicesNew() {
     {
       icon: "/analyticico.png",
       title: "Social Media Management",
-      short: "We sculpt your social presence into a living brand that speaks and captivates.",
+      short: "We sculpt your social presence into a living brand that speaks.",
       details: [
         "Brand-aligned content calendar with strategic hooks.",
         "Community engagement and reputation monitoring.",
@@ -120,6 +120,55 @@ export default function ServicesNew() {
       ],
       color: "text-white",
     },
+    {
+      icon: "/webd.webp",
+      title: "web Design",
+      short: "We built futuristic design which impress and outstand.",
+      details: [
+        "Conversion-focused landing pages built to maximize leads.",
+        "Responsive, mobile-first layouts for every device.",
+        "Next-gen UI/UX design with smooth animations & interactions.",
+        "Lightning-fast performance optimized for Core Web Vitals.",
+        "SEO-ready architecture for better search visibility.",
+        "Brand-aligned aesthetics with modern visuals.",
+      ],
+      color: "text-white",
+    },
+    {
+      icon: "/wedev.png",
+      title: "Web Development",
+      short: "Future-ready web development for growing brands.",
+      details: [
+        "Custom-coded solutions tailored to your business needs.",
+        "Responsive, mobile-first layouts for every device.",
+        "Scalable architectures ready to grow with your brand.",
+        "API & third-party integrations for seamless workflows.",
+        "High-performance optimization ensuring speed & stability.",
+        "SEO-friendly code structure for better visibility.",
+        "Ongoing support & feature updates to keep you future-ready.",
+      ],
+      color: "text-white",
+    },
+    {
+      icon: "/deploy.webp",
+      title: "Deployment",
+      short: "From code to cloud — we handle smooth deployment.",
+      details: [
+        "End-to-end deployment across web, cloud, and mobile platforms.",
+
+        "CI/CD pipelines for automated, reliable releases.",
+        
+        "cloud hosting setup (AWS, Azure, GCP, or custom servers).",
+        
+        "Zero-downtime rollouts with rollback safety.",
+        
+        "Environment configuration (dev, staging, production).",
+        
+        "Containerization & orchestration (Docker, Kubernetes)"
+      ],
+      color: "text-white",
+    },
+  
   ];
 
   return (
@@ -151,10 +200,10 @@ export default function ServicesNew() {
 
         {activeIndex !== null ? (
           <div className="mb-12">
-            <div className="bg-brand-card backdrop-blur-lg rounded-2xl p-10 border border-white/30 shadow-2xl relative">
+            <div className="bg-brand-card backdrop-blur-lg p-10 border border-white/30 shadow-2xl relative rounded-4xl">
               <button
                 onClick={() => setActiveIndex(null)}
-                className="absolute top-4 right-4 text-sm px-3 py-1 bg-gray-800 rounded-full hover:bg-gray-700 transition"
+                className="absolute top-4 right-4 text-sm px-3 py-1 bg-gray-800 rounded-full hover:bg-gray-700 transition linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -175,11 +224,11 @@ export default function ServicesNew() {
                   <p className="text-black mb-4">
                     {services[activeIndex].short}
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                  <div className="grid  grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
                     {services[activeIndex].details.map((point, i) => (
                       <div
                         key={i}
-                        className="bg-white/10 rounded-lg p-4 border border-white/20"
+                        className=" bg-black rounded-lg p-4 border border-white/20"
                       >
                         <p className="text-gray-100">{point}</p>
                       </div>
@@ -205,9 +254,14 @@ export default function ServicesNew() {
                     <div
                       className={`rounded-2xl p-8 border transition-all duration-500 ease-in-out cursor-pointer group ${
                         isHovered
-                          ? "scale-110 shadow-2xl border-white/40 bg-gradient-to-br from-red-500 via-purple-600 to-blue-500"
-                          : "bg-white border-gray-200"
+                          ? "scale-110 shadow-2xl  "
+                          : "bg-white border-black border-4"
                       }`}
+                      style={{
+                        background: isHovered 
+                          ? 'linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1) '
+                          : 'white'
+                      }}
                     >
                       <div className="mb-4">
                         <img
@@ -216,14 +270,10 @@ export default function ServicesNew() {
                           className="w-50 h-36 object-contain"
                         />
                       </div>
-                      <h3 className={`text-xl font-bold mb-3 transition-all duration-500 ${
-                        isHovered ? "text-white" : "text-gray-800"
-                      }`}>
+                      <h3 className="text-xl font-bold mb-3 text-gray-800">
                         {service.title}
                       </h3>
-                      <p className={`mb-2 transition-all duration-500 ${
-                        isHovered ? "text-white/90" : "text-gray-600"
-                      }`}>{service.short}</p>
+                      <p className="mb-2 text-gray-600">{service.short}</p>
                     </div>
                   </ParallaxCard>
                 </div>

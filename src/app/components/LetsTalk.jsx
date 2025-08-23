@@ -158,7 +158,7 @@ export default function LetsTalk() {
                       type="text"
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="Your name"
+                      placeholder="Vignesh yadav"
                       required
                     />
                     <Field
@@ -167,7 +167,7 @@ export default function LetsTalk() {
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="your@email.com"
+                      placeholder="Vignesh@email.com"
                       required
                     />
                   </div>
@@ -209,7 +209,7 @@ export default function LetsTalk() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[var(--tv-accent) text- px-6 py-3 rounded-lg font-semibold transition-all duration-500 transform hover:scale-110 hover:shadow-2xl "
+                    className="w-full bg-white text-black px-6 py-3 rounded-lg font-semibold transition-all duration-500 transform hover:scale-110 hover:shadow-2xl "
                   >
                     Send Message
                   </button>

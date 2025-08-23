@@ -76,8 +76,8 @@ export default function TiltCardSection() {
   };
 
   return (
-    <section className="py-20 px-6 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-6 bg-gray-50 border-b border-[#c0c0c0]">
+      <div className="max-w-8xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             Our Expertise
@@ -89,7 +89,7 @@ export default function TiltCardSection() {
 
         <div 
           ref={sectionRef}
-          className="relative flex flex-wrap justify-center items-center gap-8 min-h-[400px]"
+          className="relative flex flex-wrap justify-center items-center gap-8 min-h-[300px]"
         >
           {images.map((img, idx) => {
             const dispersion = getCardDispersion(idx);
@@ -97,8 +97,8 @@ export default function TiltCardSection() {
               <TiltCard
                 key={idx}
                 imageSrc={img.src}
-                title={img.title}
-                subtitle={img.subtitle}
+                // title={img.title}
+                // subtitle={img.subtitle}
                 className="transition-all duration-300 ease-out"
                 style={{
                   transform: `translate(${dispersion.x}px, ${dispersion.y}px) scale(${dispersion.scale})`,

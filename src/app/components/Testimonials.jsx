@@ -12,7 +12,7 @@ const testimonials = [
           <div className="space-y-8">
             {testimonials.map(t => (
               <div key={t.name} className="text-center">
-                <p className="text-xl italic mb-4">"{t.quote}"</p>
+                <p className="text-xl  mb-4">"{t.quote}"</p>
                 <span className="font-semibold">– {t.name}</span>
               </div>
             ))}

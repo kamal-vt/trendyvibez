@@ -7,17 +7,40 @@ import Link from 'next/link';
 
 const Footer = () => {
   const footerLinks = {
-    Company: ['About Us', 'Our Team', 'Careers', 'Contact'],
-    Services: ['Digital Marketing', 'SEO', 'Social Media', 'Web Design'],
-    Resources: ['Blog', 'Case Studies', 'White Papers', 'Newsletter'],
-    Support: ['Help Center', 'Documentation', 'API', 'Status']
+    Company: [
+      { name: 'Home', href: '/' },
+      { name: 'About ', href: '/services' },
+      { name: 'Industries', href: '/industries' },
+      { name: 'Let\'s Talk', href: '/lets-talk' }
+    ],
+    Services: [
+      { name: 'All Services', href: '/services' },
+      { name: 'SEO Optimization', href: '/services#seo' },
+      { name: 'Paid Advertising', href: '/services#paid' },
+      { name: 'Social Media', href: '/services#social' },
+      { name: 'Content Strategy', href: '/services#content' },
+      { name: 'Brand Development', href: '/services#brand' }
+    ],
+    Resources: [
+      { name: 'Blog Articles', href: '/blogs' },
+      // { name: 'Resources', href: '/resources' },
+      // { name: 'Case Studies', href: '/resources#case-studies' },
+      // { name: 'Marketing Guides', href: '/resources#guides' }
+    ],
+    Industries: [
+      { name: 'All Industries', href: '/industries' },
+      { name: 'Technology', href: '/industries#tech' },
+      { name: 'Healthcare', href: '/industries#healthcare' },
+      { name: 'E-commerce', href: '/industries#ecommerce' },
+      { name: 'Finance', href: '/industries#finance' }
+    ]
   };
 
   const socialLinks = [
-    { icon: Facebook, href: '#', color: 'hover:text-blue-600' },
-    { icon: Twitter, href: '#', color: 'hover:text-sky-500' },
-    { icon: Instagram, href: '#', color: 'hover:text-pink-600' },
-    { icon: Linkedin, href: '#', color: 'hover:text-blue-700' }
+    { icon: Facebook, href: 'https://facebook.com/trendyvibe', color: 'hover:text-blue-600' },
+    { icon: Twitter, href: 'https://twitter.com/trendyvibe', color: 'hover:text-sky-500' },
+    { icon: Instagram, href: 'https://instagram.com/trendyvibe', color: 'hover:text-pink-600' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/trendyvibe', color: 'hover:text-blue-700' }
   ];
 
   return (
@@ -62,14 +85,13 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-4 text-white">{category}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
-                  <li key={link}>
-                    <motion.a
-                      href="#"
-                      whileHover={{ x: 5 }}
-                      className="text-gray-400 hover:text-white transition-colors duration-200"
+                  <li key={link.name}>
+                    <Link 
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-all duration-200 cursor-pointer hover:translate-x-1 block"
                     >
-                      {link}
-                    </motion.a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
