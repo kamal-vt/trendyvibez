@@ -59,57 +59,57 @@ export default function Industries() {
   return (
     <section 
       id="industries" 
-      className="min-h-screen bg-white text-white  px-6 relative"
+      className="min-h-screen bg-white text-white px-4 sm:px-6 py-12 md:py-20 relative"
     >
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-10">
+      {/* <div className="hidden md:block absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-20 left-10 w-2xl h-7 bg-[var(--tv-accent)] rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-[var(--tv-500)] rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white rounded-full blur-3xl opacity-20"></div>
-      </div>
+      </div> */}
 
-      <div className="max-w-6xl mx-auto relative  z-10">
-        <div className="text-center mb-8  ">
-          <div className="inline-flex items-center px-6 py-3 mt-10 bg-[#c0c0c0] backdrop-blur-sm rounded-full border border-white/20 mb-8">
+      <div className="max-w-6xl mx-auto relative z-10 ">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center  px-4 py-2 md:px-6 md:py-3 mt-6 md:mt-8 bg-[#c0c0c0] backdrop-blur-sm rounded-full border border-white/20 mb-6 md:mb-8">
             <span className="text-sm text-white font-medium">🏭 Industry Expertise</span>
           </div>
-          <h2 className="text-5xl md:text-4xl font-bold text-black ">Industries</h2>
-          <p className="text-xl md:text-2xl text-black max-w-4xl mx-auto leading-relaxed">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">Industries</h2>
+          <p className="text-base md:text-xl text-black max-w-3xl md:max-w-4xl mx-auto leading-relaxed mt-3">
             We craft digital strategies that adapt to your industry, connect with your audience, and move your brand forward.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 p-5   border-black gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-2 sm:p-4 md:p-5 gap-4 sm:gap-6 md:gap-8">
           {industries.map((industry, index) => (
             <div
               key={index}
-              className={`relative group cursor-pointer transition-all  duration-500  border-black  transform hover:scale-105`}
+              className={`relative group cursor-pointer transition-all duration-500 border-black transform md:hover:scale-105`}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              <div className={`bg-[#c0c0c0] p-8 rounded-3xl   border-white/20  backdrop-blur-sm transition-all duration-300 card-hover ${
+              <div className={`bg-[#c0c0c0] p-5 sm:p-6 md:p-8 rounded-3xl border-white/20 backdrop-blur-sm transition-all duration-300 card-hover ${
                 hoveredCard === index ? 'shadow-2xl shadow-accent' : 'shadow-brand'
               }`}>
-                <div className="text-center mb-8">
-                  <div className="text-4xl mb-6 filter bg-[#c0c0c0] drop-shadow-lg animate-float">
+                <div className="text-center mb-6 md:mb-8">
+                  <div className="text-3xl md:text-4xl mb-4 md:mb-6 filter bg-[#c0c0c0] drop-shadow-lg animate-float">
                     {industry.icon}
                   </div>
-                  <h3 className="text-2xl font-bold  mb-4 text-orange-500">{industry.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-orange-500">{industry.title}</h3>
                 </div>
                 
-                <p className="mb-8 leading-relaxed bg-[#c0c0c0] text-black text-lg">
+                <p className="mb-6 md:mb-8 leading-relaxed bg-[#c0c0c0] text-black text-sm sm:text-base md:text-lg">
                   {industry.description}
                 </p>
 
-                <div className="space-y-4 mb-8 bg-[#c0c0c0]">
+                <div className="space-y-3 md:space-y-4 mb-6 md:mb-8 bg-[#c0c0c0]">
                   {industry.metrics.map((metric, idx) => (
-                    <div key={idx} className="text-sm font-semibold text-black bg-white/5 px-4 py-2 rounded-xl  border-white/10">
+                    <div key={idx} className="text-xs sm:text-sm font-semibold text-black bg-white/5 px-3 py-2 rounded-xl border-white/10">
                       {metric}
                     </div>
                   ))}
                 </div>
 
-                <div className="text-sm  text-black bg-white/5 p-5  m-5 rounded-xl  border-white/10">
+                <div className="text-xs sm:text-sm text-black bg-white/5 p-4 sm:p-5 m-3 sm:m-5 rounded-xl border-white/10">
                   <span className="font-semibold text-black">Case Study:</span> {industry.caseStudy}
                 </div>
               </div>

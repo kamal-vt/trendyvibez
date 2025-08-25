@@ -36,27 +36,27 @@ export default function TiltCardSection() {
 
   const images = [
     { 
-      src: '/images/seoimg.jpg', 
+      src: '/d1.jpg', 
       title: 'SEO Optimization', 
       subtitle: 'Search Engine Excellence' 
     },
     { 
-      src: '/images/paidimg.jpg', 
+      src: '/d2.jpg', 
       title: 'Paid Advertising', 
       subtitle: 'Targeted Campaigns' 
     },
     { 
-      src: '/images/socialimg.jpg', 
+      src: '/d3.jpg', 
       title: 'Social Media', 
       subtitle: 'Community Building' 
     },
     { 
-      src: '/images/contentimg.jpg', 
+      src: '/d4.jpg', 
       title: 'Content Strategy', 
       subtitle: 'Strategic Storytelling' 
     },
     { 
-      src: '/images/brandimg.jpg', 
+      src: '/d6.jpg', 
       title: 'Brand Development', 
       subtitle: 'Identity Creation' 
     }
@@ -67,12 +67,11 @@ export default function TiltCardSection() {
     const dispersionFactor = Math.min(mouseSpeed * 2, 100); // Cap at 100px
     const angle = (index / images.length) * 2 * Math.PI;
     const radius = dispersionFactor;
-    
-    return {
-      x: Math.cos(angle) * radius,
-      y: Math.sin(angle) * radius,
-      scale: 1 + (dispersionFactor / 200) // Slight scale effect
-    };
+    const x = Math.cos(angle) * radius;
+    const y = Math.sin(angle) * radius;
+
+    // Keep card sizes consistent: no per-card scaling
+    return { x, y, scale: 1 };
   };
 
   return (
@@ -99,9 +98,9 @@ export default function TiltCardSection() {
                 imageSrc={img.src}
                 // title={img.title}
                 // subtitle={img.subtitle}
-                className="transition-all duration-300 ease-out"
+                className="transition-transform duration-300 ease-out"
                 style={{
-                  transform: `translate(${dispersion.x}px, ${dispersion.y}px) scale(${dispersion.scale})`,
+                  transform: `translate(${dispersion.x}px, ${dispersion.y}px)`,
                 }}
               />
             );

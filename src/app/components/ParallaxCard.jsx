@@ -26,7 +26,7 @@ export default function ParallaxCard({ children, intensity = 12, className = '',
 
   return (
     <div className={className} onMouseMove={handleMove} onMouseLeave={handleLeave} {...props}>
-      <div ref={innerRef} className="will-change-transform">
+      <div ref={innerRef} className="will-change-transform h-full">
         {children}
       </div>
     </div>

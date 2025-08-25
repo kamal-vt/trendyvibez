@@ -239,23 +239,21 @@ export default function ServicesNew() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 auto-rows-[minmax(0,1fr)] items-stretch">
             {services.map((service, index) => {
               const isHovered = hoveredIndex === index;
               return (
                 <div
                   key={index}
-                  className="relative"
+                  className="relative h-full"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                   onClick={() => setActiveIndex(index)}
                 >
-                  <ParallaxCard intensity={10} className="">
+                  <ParallaxCard intensity={10} className="h-full">
                     <div
-                      className={`rounded-2xl p-8 border transition-all duration-500 ease-in-out cursor-pointer group ${
-                        isHovered
-                          ? "scale-110 shadow-2xl  "
-                          : "bg-white border-black border-4"
+                      className={`rounded-2xl p-8 border transition-all duration-300 ease-in-out cursor-pointer group h-full flex flex-col justify-between gap-4 ${
+                        isHovered ? "shadow-2xl" : "bg-white border-black border-4"
                       }`}
                       style={{
                         background: isHovered 
@@ -263,17 +261,21 @@ export default function ServicesNew() {
                           : 'white'
                       }}
                     >
-                      <div className="mb-4">
+                      <div className="h-36 flex items-center justify-center">
                         <img
                           src={service.icon}
                           alt={service.title}
-                          className="w-50 h-36 object-contain"
+                          className="w-44 h-36 object-contain"
                         />
                       </div>
-                      <h3 className="text-xl font-bold mb-3 text-gray-800">
-                        {service.title}
-                      </h3>
-                      <p className="mb-2 text-gray-600">{service.short}</p>
+                      <div className="flex-1 flex flex-col">
+                        <h3 className="text-xl font-bold mb-2 text-gray-800">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed mt-1 flex-1">
+                          {service.short}
+                        </p>
+                      </div>
                     </div>
                   </ParallaxCard>
                 </div>

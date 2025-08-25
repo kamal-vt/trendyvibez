@@ -71,8 +71,8 @@ export default function Resources() {
   ];
 
   return (
-    <section ref={sectionRef} className="text-gray-800 py-10 px-6 relative rounded-4xl" style={{
-      background: 'linear-gradient(120deg, #ef4444, #8b5cf6, #3b82f6)'
+    <section ref={sectionRef} className="text-gray-800 py-10 px-6 relative bg-white rounded-4xl" style={{
+      // background: 'linear-gradient(120deg, #ef4444, #8b5cf6, #3b82f6)'
     }}>
       {/* Zoom Image */}
       <div 
@@ -134,13 +134,13 @@ export default function Resources() {
                     </div>
                   </div>
                   
-                  <p className="mb-6 leading-relaxed text-center text-blue-700">
+                  <p className="mb-6 leading-relaxed text-center text-black">
                     {resource.description}
                   </p>
 
                   <div className="mb-6">
                     <div className="font-bold mb-2 text-gray-800">Featured</div>
-                    <div className="text-sm text-gray-600">
+                    <div className="text-sm text-black">
                       {resource.featured}
                     </div>
                   </div>

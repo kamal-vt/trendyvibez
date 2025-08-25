@@ -107,7 +107,7 @@ export default function HeroSection() {
 						</div>
 
 						<div className="space-y-3 md:space-y-4">
-							<h1 className="font-extrabold leading-[0.95] tracking-tight p-0 text-[2.6rem] sm:text-6xl md:text-5xl lg:text-[7.5rem]">
+							<h1 className="font-extrabold leading-[1] tracking-tight p-0 text-[2.6rem] sm:text-6xl md:text-5xl lg:text-[7.5rem]">
 								<span className="block text-white">Grow Faster Through</span>
 								<span className="block text-white">Smarter <span className="text-coral-pink">Marketing</span></span>
 							</h1>

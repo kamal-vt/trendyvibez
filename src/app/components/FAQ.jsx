@@ -49,7 +49,7 @@ export default function FAQ() {
               key={index}
               className="bg-[#ffffff] backdrop-blur-sm rounded-xl p-8 border border-gray-200 transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 hover:shadow-2xl hover:shadow-gray-300/60 hover:border-gray-300"
             >
-              <h3 className="text-xl font-semibold text-red-600 mb-3">
+              <h3 className="text-xl font-semibold text-orange-600 mb-3">
                 {faq.question}
               </h3>
               <p className="text-gray-700 leading-relaxed">{faq.answer}</p>

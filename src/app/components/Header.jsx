@@ -56,16 +56,16 @@ export default function Header() {
   return (
     <div className="fixed top-0 left-0 z-50 w-full">
       {/* Fixed Header */}
-      <header className="py-4 md:py-5 backdrop-blur text-red-700">
+      <header className="py-4 md:py-5 pr-2 pl-2 rounded-4xl bg-white/90 backdrop-blur supports-backdrop-blur:bg-white/70 text-black shadow ">
         <div className="flex items-center w-11/12 mx-auto gap-6">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
             {/* <img src="/brandico.png" alt="Trendy Vibe logo" className="h-8 w-8 rounded" /> */}
-            <span className="text-xl md:text-2xl font-extrabold tracking-tight">Trendy Vibes</span>
+            <span className="text-xl md:text-2xl font-extrabold text-[#494949] tracking-tight">Trendy Vibes</span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex mx-auto items-center gap-8 text-white/90">
+          <nav className="hidden md:flex mx-auto items-center gap-8 text-black/90">
             {[
               { href: "/", id: "home", type: "home", label: "Home" },
               { href: "/services", id: "services", type: "services", label: "Services" },
@@ -78,7 +78,7 @@ export default function Header() {
                 key={id}
                 href={href}
                 className={`transition-all duration-300 relative hover:text-white ${
-                  pathname === href ? "text-red-700 font-extrabold" : "text-red-500 font-bold"
+                  pathname === href ? "text-orange-700 font-extrabold" : "text-[#494949] font-bold"
                 } ${
                   clickedElement === id
                     ? "button-click-animation text-coral-pink scale-95"
@@ -99,17 +99,17 @@ export default function Header() {
 
           {/* Right Controls */}
           <div className="hidden md:flex items-center gap-4">
-            <button aria-label="Search" className="p-2 rounded-lg bg-white/10 border border-white/10 hover:bg-white/15">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button aria-label="Search" className="p-2 rounded-lg bg-red-50 border border-red-100 hover:bg-red-100">
+              <svg className="w-5 h-5 text-[#494949]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm10 2-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            <Link href="/lets-talk" className="px-4 py-2 rounded-xl bg-white text-red-600 font-semibold hover:bg-slate-100 transition">Get Started</Link>
+            <Link href="/lets-talk" className="px-4 py-2 rounded-xl bg-white text-[#494949] font-semibold hover:bg-slate-100 transition">Get Started</Link>
           </div>
 
           {/* Mobile Hamburger */}
           <button
-            className={`md:hidden flex flex-col space-y-1 p-2 relative ${
+            className={`md:hidden ml-auto flex flex-col space-y-1 p-2 relative ${
               clickedElement === "hamburger"
                 ? "button-click-animation scale-95"
                 : ""
@@ -121,17 +121,17 @@ export default function Header() {
             aria-label="Toggle menu"
           >
             <span
-              className={`block w-6 h-0.5 bg-white transition-all ${
+              className={`block w-6 h-0.5 bg-red-600 transition-all ${
                 isMenuOpen ? "rotate-45 translate-y-1.5" : ""
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-white transition-all ${
+              className={`block w-6 h-0.5 bg-red-600 transition-all ${
                 isMenuOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-white transition-all ${
+              className={`block w-6 h-0.5 bg-red-600 transition-all ${
                 isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
               }`}
             />
@@ -146,49 +146,31 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 bg-muted-purple text-white">
-          <div className="flex flex-col w-full h-full">
-            <div className="flex items-center justify-between px-6 py-4 border-b border-dusty-rose">
-              <span className="text-xl font-bold flex items-center gap-2"><img src="/brandico.png" alt="Trendy Vibe" className="h-6 w-6"/> Trendy Vibe</span>
-              <button
-                onClick={closeMenu}
-                aria-label="Close menu"
-                className="text-2xl font-bold"
-              >
-                &times;
-              </button>
-            </div>
-            <div className="flex flex-col items-center justify-center flex-1 space-y-8">
+        <div className="md:hidden fixed top-16 left-0 right-0 z-40 bg-white text-black shadow border-b">
+          <div className="flex flex-col w-full">
+            <nav className="py-2">
               {[
                 { href: "/", id: "mobile-home", type: "home", label: "Home" },
                 { href: "/services", id: "mobile-services", type: "services", label: "Services" },
                 { href: "/industries", id: "mobile-industries", type: "industries", label: "Industries" },
                 { href: "/resources", id: "mobile-resources", type: "resources", label: "Resources" },
-                { href: "/blogs", id: "mobile-blogs", type: "blogs", label: "Blog" },
-                { href: "/lets-talk", id: "mobile-lets-talk", type: "lets-talk", label: "Let’s Talk" },
+                { href: "/lets-talk", id: "mobile-lets-talk", type: "lets-talk", label: "Let’s Connect" },
               ].map(({ href, id, type, label }) => (
-              <Link
-                key={id}
-                href={href}
-                className={`text-2xl font-semibold hover:text-coral-pink transition-all relative ${
-                  clickedElement === id
-                    ? "button-click-animation text-coral-pink scale-95"
-                    : ""
-                }`}
-                onClick={() => {
-                  closeMenu();
-                  handleClick(id, type);
-                }}
-              >
+                <Link
+                  key={id}
+                  href={href}
+                  className={`block px-6 py-3 text-base font-medium hover:bg-red-50 hover:text-red-600 transition-colors ${
+                    clickedElement === id ? "text-red-600" : "text-black"
+                  }`}
+                  onClick={() => {
+                    closeMenu();
+                    handleClick(id, type);
+                  }}
+                >
                   {label}
-                  {showIcon === type && clickedElement === id && (
-                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 icon-animation text-2xl">
-                      {getIcon(type)}
-                    </span>
-                  )}
                 </Link>
               ))}
-            </div>
+            </nav>
           </div>
         </div>
       )}

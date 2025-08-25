@@ -44,7 +44,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-[#873999] text-white rounded-2xl">
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Brand Section */}
@@ -56,23 +56,23 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-to-r from-coral-pink to-dusty-rose rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">TV</span>
               </div>
-              <span className="text-white font-bold text-2xl">Trendy Vibe</span>
+              <span className="text-orange-600 font-bold text-2xl">Trendy Vibe</span>
             </motion.div>
             
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-black mb-6 leading-relaxed">
               From strategy to scale, we craft digital experiences that captivate, convert, and keep your audience coming back for more.
             </p>
 
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-400">
+              <div className="flex items-center space-x-3 text-black">
                 <Mail size={16} />
                 <span>hello@trendyvibes.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400">
+              <div className="flex items-center space-x-3 text-black">
                 <Phone size={16} />
-                <span>+1 (555) 123-4567</span>
+                <span>7207376333</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400">
+              <div className="flex items-center space-x-3 text-black">
                 <MapPin size={16} />
                 <span>Cyber Towers, HITEC City, Hyderabad, Telangana, 500081</span>
               </div>
@@ -88,7 +88,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link 
                       href={link.href}
-                      className="text-gray-400 hover:text-white transition-all duration-200 cursor-pointer hover:translate-x-1 block"
+                      className="text-black hover:text-white transition-all duration-200 cursor-pointer hover:translate-x-1 block"
                     >
                       {link.name}
                     </Link>
@@ -104,7 +104,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
               <h4 className="text-lg font-semibold mb-2">Stay Updated</h4>
-              <p className="text-gray-400">Subscribe to our newsletter for the latest marketing insights.</p>
+              <p className="text-black">Subscribe to our newsletter for the latest marketing insights.</p>
         </div>
 
             <motion.div 
@@ -114,12 +114,12 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 md:w-64 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-coral-pink transition-colors"
+                className="flex-1 md:w-64 px-4 py-3 text-black bg-white border border-black rounded-l-lg focus:outline-none rounded-2xl focus:border-coral-pink transition-colors"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-coral-pink hover:bg-dusty-rose text-white rounded-r-lg font-medium transition-colors"
+                className="px-6 py-3 bg-coral-pink hover:bg-dusty-rose text-black rounded-r-lg font-medium transition-colors"
               >
                 Subscribe
               </motion.button>
@@ -129,7 +129,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
+          <p className="text-black text-sm mb-4 md:mb-0">
             © 2024 Trendy Vibe. All rights reserved.
           </p>
           
@@ -140,7 +140,7 @@ const Footer = () => {
                 href={social.href}
                 whileHover={{ scale: 1.2, y: -2 }}
                 whileTap={{ scale: 0.9 }}
-                className={`p-2 text-gray-400 ${social.color} transition-colors duration-200`}
+                className={`p-2 text-black ${social.color} transition-colors duration-200`}
               >
                 <social.icon size={20} />
               </motion.a>
