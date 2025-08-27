@@ -48,12 +48,10 @@ export default function Blogs() {
                     </div>
                   ) : (
                     <div className="bg-gradient-to-br from-blue-800 to-purple-700 rounded-2xl p-6 text-center relative overflow-hidden">
-                      <div className="text-6xl mb-4">🎓</div>
+                      <div className="text-6xl mb">🎓</div>
                       <div className="text-4xl mb-2">📚</div>
                       <div className="flex justify-center space-x-3 text-xl">
-                        <span className="text-blue-300">💻</span>
-                        <span className="text-yellow-300">🔍</span>
-                        <span className="text-green-300">💬</span>
+                        
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent"></div>
                     </div>

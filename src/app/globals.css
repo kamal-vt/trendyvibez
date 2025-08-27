@@ -42,10 +42,7 @@ body {
   opacity: 0.3;
 }
 
-.bg-brand-deep {
-  background: linear-gradient(135deg, #3C5E77 0%, #6F5875 100%);
-  position: relative;
-}
+
 
 .bg-brand-panel {
   background: linear-gradient(135deg, rgba(60, 94, 119, 0.35), rgba(111, 88, 117, 0.45) 50%, rgba(183, 104, 130, 0.7));
@@ -361,4 +358,22 @@ body {
 html, body {
   -ms-overflow-style: none;  /* IE + Edge */
   scrollbar-width: none;     /* Firefox */
+}
+
+/* Hero background zoom animation */
+@keyframes heroZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-hero-zoom {
+  animation: heroZoom 16s ease-in-out infinite;
+  will-change: transform;
 }

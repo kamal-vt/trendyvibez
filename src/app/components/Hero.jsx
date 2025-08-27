@@ -62,17 +62,24 @@ export default function HeroSection() {
 		<section
 			className="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
 			style={{ 
-				backgroundImage: "url('/hero-bg.jpg')", 
-				backgroundSize: 'cover', 
-				backgroundPosition: 'center',
 				marginTop: '-80px',
 				paddingTop: '80px'
 			}}
 			onMouseMove={handleMouseMove}
 		>
+			{/* Animated Background Image Layer */}
+			<div className="absolute inset-0 z-0">
+				<img
+					src="/hero-bg.jpg"
+					alt="Hero background"
+					className="w-full h-full object-cover animate-hero-zoom select-none"
+					decoding="async"
+					fetchpriority="high"
+				/>
+			</div>
 			{/* Left Overlay Image with mouse interaction */}
 			<div
-				className="pointer-events-none absolute left-2 sm:left-6 md:left-10 top-1/2 -translate-y-1/2 z-10"
+				className="pointer-events-none absolute left-4 sm:left-6 md:left-10 bottom-4 sm:bottom-6 md:bottom-10 z-20"
 				style={{
 					transform: `translate(calc(${mousePosition.x * -12}px + ${drift.x}px), calc(${mousePosition.y * -8}px + ${drift.y}px))`
 				}}
@@ -85,8 +92,8 @@ export default function HeroSection() {
 				/>
 			</div>
 
-			{/* Background */}
-			<div className="absolute inset-0 bg-black/30">
+			{/* Background overlays */}
+			<div className="absolute inset-0 bg-black/30 z-10">
 				<div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none select-none">
 					{/* Removed blurred circle under sticky navbar */}
 					{/* <div className="absolute bottom-8 right-4 md:bottom-20 md:right-20 w-40 md:w-96 h-40 md:h-96 border border-white/10 rounded-full"></div> */}
@@ -95,7 +102,7 @@ export default function HeroSection() {
 			</div>
 
 			{/* Content */}
-			<div className="relative z-10 max-w-7xl mx-auto w-full px-2 sm:px-4 md:px-8">
+			<div className="relative z-20 max-w-7xl mx-auto w-full px-2 sm:px-4 md:px-8">
 				<div className="grid grid-cols-1 gap-6 md:gap-10 items-center justify-items-center text-center">
 					{/* Centered Content */}
 					<div className="space-y-6 md:space-y-8">

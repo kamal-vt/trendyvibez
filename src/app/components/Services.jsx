@@ -214,7 +214,7 @@ export default function Services() {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative max-w-3xl mx-auto bg-[#221db7]  rounded-3xl p-8 md:p-12 shadow-2xl">
+        <div className="relative max-w-3xl mx-auto  bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e]  rounded-3xl p-8 md:p-12 shadow-2xl">
           <div className="overflow-hidden rounded-2xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
@@ -222,7 +222,7 @@ export default function Services() {
             >
               {services.map((service, index) => (
                 <div key={index} className="w-full flex-shrink-0">
-                  <div className="bg-white  k rounded-2xl text-black p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <div className="bg-white  rounded-2xl text-black p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                     <div className="grid md:grid-cols-2 text-black gap-8">
                       {/* Left Side - Illustration */}
                       <div className="flex items-center justify-center">
@@ -289,13 +289,13 @@ export default function Services() {
 
         {/* SEO Content Section */}
         <div className="mt-20">
-          <div className="bg-[#FBEAFF]  border-black rounded-3xl p-8 md:p-12 shadow-2xl">
+          <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] border-black rounded-3xl p-8 md:p-12 shadow-2xl">
             {/* Main Heading */}
             <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#001E5A] mb-6">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#eaecf0] mb-6">
                 The Case for SEO: Why It Matters to Your Business
               </h3>
-              <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
                 SEO is how customers find you. From technical fixes to content and links,
                 improving search visibility drives qualified traffic and sustainable growth.
               </p>
@@ -374,13 +374,13 @@ export default function Services() {
 
         {/* Paid Advertising Content Section */}
         <div className="mt-20">
-          <div className="bg-[#FBEAFF] backdrop-blur-sm rounded-3xl p-8 md:p-12 border text-black border-white/20">
+          <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] backdrop-blur-sm rounded-3xl p-8 md:p-12 border text-black border-white/20">
             {/* Main Heading */}
             <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#001E5A] mb-6">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#f2f3f6] mb-6">
                 Paid Advertising: A Smart Move for Business Expansion
               </h3>
-              <p className="text-lg text-black max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
                 In a fast-moving digital world, Paid Advertising offers a direct path to visibility, leads, and conversions. Whether it's Google Ads, social media campaigns, or display banners, paid media allows your brand to appear in front of the right audience almost instantly. Unlike organic methods that take time to build momentum, paid ads deliver immediate exposure and measurable results making them essential for competitive growth.
               </p>
             </div>
@@ -458,13 +458,13 @@ export default function Services() {
 
         {/* Social Media Management Content Section */}
         <div className="mt-20">
-          <div className="bg-[#FBEAFF] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
+          <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
             {/* Main Heading */}
             <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#001E5A] mb-6">
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Your Business Needs Social Media Management
               </h3>
-              <p className="text-lg text-black max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
                 In today's connected world, your social media presence is often the first impression your brand makes. Social Media Management goes beyond posting content; it's about building a voice, creating community, and driving meaningful engagement with your audience. Whether on Instagram, LinkedIn, Facebook, or X (Twitter), effective management ensures your brand stays consistent, responsive, and relevant. Done right, it turns followers into customers and customers into loyal advocates.
               </p>
             </div>
@@ -542,16 +542,16 @@ export default function Services() {
 
         {/* Brand Development Content Section */}
         <div className="mt-20">
-          <div className="bg-[#FBEAFF] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
+          <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
             {/* Main Heading */}
             <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#001E5A] mb-6">
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Branding: The Foundation of Business Success
               </h3>
-              <p className="text-lg text-black max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
                 Your brand is more than a logo or tagline, it's the perception people hold about your business. Effective Brand Development shapes how you're seen, how you're remembered, and how you connect emotionally with your audience. In a saturated market, a strong brand sets you apart, communicates your values, and creates a lasting impression.
               </p>
-              <p className="text-lg text-black max-w-4xl mx-auto mt-4 leading-relaxed">
+              <p className="text-lg text-white max-w-4xl mx-auto mt-4 leading-relaxed">
                 Brand development isn't just design work—it's the foundation of identity, trust, and long-term loyalty.
               </p>
             </div>
@@ -629,16 +629,16 @@ export default function Services() {
 
         {/* Content Strategy Content Section */}
         <div className="mt-20">
-          <div className="bg-[#FBEAFF] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
+          <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
             {/* Main Heading */}
             <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#001E5A] mb-6">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#ffffff] mb-6">
                 Why Strategic Content is Essential for Your Business
               </h3>
-              <p className="text-lg text-black max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
                 In a digital world overflowing with information, content is how your brand earns attention, builds authority, and drives action. A Content Strategy ensures every piece of content—whether a blog post, video, social post, or email—serves a purpose and supports your business goals.
               </p>
-              <p className="text-lg text-black max-w-4xl mx-auto mt-4 leading-relaxed">
+              <p className="text-lg text-white max-w-4xl mx-auto mt-4 leading-relaxed">
                 Rather than creating content for the sake of it, a strategy helps you deliver the right message, to the right audience, at the right time—turning content into a revenue-generating asset.
               </p>
             </div>
@@ -716,16 +716,16 @@ export default function Services() {
 
         {/* Analytics Content Section */}
         <div className="mt-20">
-          <div className="bg-[#FBEAFF] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
+          <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
             {/* Main Heading */}
             <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#001E5A] mb-6">
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Analytics: The Backbone of Smarter Business Moves
               </h3>
-              <p className="text-lg text-black max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
                 In digital marketing, what gets measured gets improved. Analytics and reporting aren't just tools—they're the compass that guides your strategy, budgets, and business decisions. From website behavior to campaign performance, Analytics & Reporting provide the clarity you need to understand what's working, what's not, and where your greatest opportunities lie.
               </p>
-              <p className="text-lg text-black max-w-4xl mx-auto mt-4 leading-relaxed">
+              <p className="text-lg text-white max-w-4xl mx-auto mt-4 leading-relaxed">
                 With the right insights in hand, you can stop guessing and start growing with confidence.
               </p>
             </div>

@@ -4,35 +4,59 @@ import { useState, useEffect, useRef } from 'react';
 import TiltCard from './TiltCard';
 
 export default function TiltCardSection() {
-  const [mouseSpeed, setMouseSpeed] = useState(0);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [lastMousePosition, setLastMousePosition] = useState({ x: 0, y: 0 });
-  const [lastMouseTime, setLastMouseTime] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const rafRef = useRef<number | null>(null);
+  const targetNormRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+  const currentNormRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [normOffset, setNormOffset] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const currentTime = Date.now();
-      const currentPosition = { x: e.clientX, y: e.clientY };
-      
-      if (lastMouseTime > 0) {
-        const timeDelta = currentTime - lastMouseTime;
-        const distance = Math.sqrt(
-          Math.pow(currentPosition.x - lastMousePosition.x, 2) + 
-          Math.pow(currentPosition.y - lastMousePosition.y, 2)
-        );
-        const speed = distance / timeDelta; // pixels per millisecond
-        setMouseSpeed(speed);
-      }
-      
-      setMousePosition(currentPosition);
-      setLastMousePosition(currentPosition);
-      setLastMouseTime(currentTime);
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const onMouseMove = (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const nx = ((e.clientX - cx) / (rect.width / 2)); // -1..1
+      const ny = ((e.clientY - cy) / (rect.height / 2)); // -1..1
+      // Clamp to safe range
+      targetNormRef.current.x = Math.max(-1, Math.min(1, nx));
+      targetNormRef.current.y = Math.max(-1, Math.min(1, ny));
+      startRAF();
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [lastMousePosition, lastMouseTime]);
+    const onMouseLeave = () => {
+      targetNormRef.current = { x: 0, y: 0 };
+      startRAF();
+    };
+
+    el.addEventListener('mousemove', onMouseMove);
+    el.addEventListener('mouseleave', onMouseLeave);
+    return () => {
+      el.removeEventListener('mousemove', onMouseMove);
+      el.removeEventListener('mouseleave', onMouseLeave);
+    };
+  }, []);
+
+  const startRAF = () => {
+    if (rafRef.current != null) return;
+    const step = () => {
+      const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+      currentNormRef.current.x = lerp(currentNormRef.current.x, targetNormRef.current.x, 0.1);
+      currentNormRef.current.y = lerp(currentNormRef.current.y, targetNormRef.current.y, 0.1);
+      setNormOffset({ ...currentNormRef.current });
+
+      const dx = Math.abs(currentNormRef.current.x - targetNormRef.current.x);
+      const dy = Math.abs(currentNormRef.current.y - targetNormRef.current.y);
+      if (dx + dy < 0.002) {
+        rafRef.current = null;
+        return;
+      }
+      rafRef.current = requestAnimationFrame(step);
+    };
+    rafRef.current = requestAnimationFrame(step);
+  };
 
   const images = [
     { 
@@ -62,16 +86,12 @@ export default function TiltCardSection() {
     }
   ];
 
-  const getCardDispersion = (index: number) => {
-    const baseGap = 32; // 8 * 4 (gap-8)
-    const dispersionFactor = Math.min(mouseSpeed * 2, 100); // Cap at 100px
-    const angle = (index / images.length) * 2 * Math.PI;
-    const radius = dispersionFactor;
-    const x = Math.cos(angle) * radius;
-    const y = Math.sin(angle) * radius;
-
-    // Keep card sizes consistent: no per-card scaling
-    return { x, y, scale: 1 };
+  const getCardOffset = (index: number) => {
+    const depthFactor = (index + 1) / images.length; // 0..1
+    const maxTranslate = 40; // px
+    const x = normOffset.x * maxTranslate * depthFactor;
+    const y = normOffset.y * maxTranslate * depthFactor;
+    return { x, y };
   };
 
   return (
@@ -91,18 +111,19 @@ export default function TiltCardSection() {
           className="relative flex flex-wrap justify-center items-center gap-8 min-h-[300px]"
         >
           {images.map((img, idx) => {
-            const dispersion = getCardDispersion(idx);
+            const { x, y } = getCardOffset(idx);
             return (
-              <TiltCard
+              <div
                 key={idx}
-                imageSrc={img.src}
-                // title={img.title}
-                // subtitle={img.subtitle}
-                className="transition-transform duration-300 ease-out"
-                style={{
-                  transform: `translate(${dispersion.x}px, ${dispersion.y}px)`,
-                }}
-              />
+                className="transition-transform duration-200 ease-out"
+                style={{ transform: `translate3d(${x}px, ${y}px, 0)` }}
+              >
+                <TiltCard
+                  imageSrc={img.src}
+                  // title={img.title}
+                  // subtitle={img.subtitle}
+                />
+              </div>
             );
           })}
         </div>

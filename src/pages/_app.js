@@ -8,11 +8,12 @@ export default function App({ Component, pageProps }) {
   return (
     // <GSAPAnimations>
       <PageTransition>
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-white">
           <Header />
-          <main className="mt-16">
+          <main className="mt-16 ">
             <Component {...pageProps} />
           </main>
+        
           <Footer />
         </div>
       </PageTransition>

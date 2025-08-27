@@ -56,7 +56,7 @@ export default function Header() {
   return (
     <div className="fixed top-0 left-0 z-50 w-full">
       {/* Fixed Header */}
-      <header className="py-4 md:py-5 pr-2 pl-2 rounded-4xl bg-white/90 backdrop-blur supports-backdrop-blur:bg-white/70 text-black shadow ">
+      <header className="py-4 md:py-5 pr-2 pl-2  bg-white/90 backdrop-blur supports-backdrop-blur:bg-white/70 text-black shadow ">
         <div className="flex items-center w-11/12 mx-auto gap-6">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">

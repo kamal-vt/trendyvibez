@@ -252,8 +252,8 @@ export default function ServicesNew() {
                 >
                   <ParallaxCard intensity={10} className="h-full">
                     <div
-                      className={`rounded-2xl p-8 border transition-all duration-300 ease-in-out cursor-pointer group h-full flex flex-col justify-between gap-4 ${
-                        isHovered ? "shadow-2xl" : "bg-white border-black border-4"
+                      className={`rounded-2xl p-8  transition-all duration-300 ease-in-out cursor-pointer group h-full flex flex-col justify-between gap-4 ${
+                        isHovered ? "shadow-2xl" : "bg-white border-black shadow-2xl"
                       }`}
                       style={{
                         background: isHovered 

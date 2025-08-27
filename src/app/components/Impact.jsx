@@ -98,7 +98,7 @@ export default function Impact() {
       title: "Enhanced Brand Visibility",
       value: "400%",
       description: "Improved brand recognition and market presence",
-      color: "text-purple-600"
+      color: "text-blue-600"
     },
     {
       title: "ROI Improvement",
@@ -114,7 +114,7 @@ export default function Impact() {
       title: "Customer Engagement",
       value: "320%",
       description: "Increased customer engagement and interaction rates",
-      color: "text-blue-400"
+      color: "text-blue-600"
     },
         {
           title: "Social Media Growth",
