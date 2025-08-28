@@ -7,7 +7,7 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "luc
 
 const Footer = () => {
   return (
-         <footer className="relative bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] text-white overflow-hidden rounded-t-[30px] sm:rounded-t-[50px] pt-16 sm:pt-20 pb-8">
+         <footer className="relative bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] text-white overflow-hidden rounded-t-[30px] sm:rounded-t-[50px] pt-16 sm:pt-20 pb-4">
       {/* Background Glow */}
       <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-[#c6186e]/20 blur-[120px]" />
       <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#3d3ed3]/20 blur-[140px]" />
