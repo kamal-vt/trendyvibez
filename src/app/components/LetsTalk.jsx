@@ -31,7 +31,7 @@ const contactInfo = [
 
 const whyChoose = [
   "4+ years of digital marketing expertise",
-  "50+ successful projects completed",
+  "180+ successful projects completed",
   "98% client satisfaction rate",
   "Dedicated account management",
   "Data-driven strategies that deliver ROI",
@@ -274,7 +274,7 @@ export default function LetsTalk() {
                       <div className="text-sm text-white">Avg. ROI Increase</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xl font-bold text-white">50+</div>
+                      <div className="text-xl font-bold text-white">180+</div>
                       <div className="text-sm text-white">Projects Completed</div>
                     </div>
                     <div className="text-center">
@@ -294,14 +294,14 @@ export default function LetsTalk() {
 
         {/* Why Choose Us */}
         <div className="text-center text-black">
-          <h2 className="text-3xl font-bold text-black mb-8">
+          <h2 className="text-3xl font-bold text-black mb-8 ">
             Why Choose Trendy Vibes?
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 text-white gap-6 ">
             {whyChoose.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl text-white p-6 border border-white/20 flex items-start gap-4 transition-all duration-500 transform hover:scale-110 hover:shadow-2xl group"
+                className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl shadow-[#302b63]  text-white p-6 border border-white/20 flex items-start gap-4 transition-all duration-500 transform hover:scale-110 hover:shadow-2xl group"
               >
                 <div className="text-green-600 text-2xl mt-1 transition-transform duration-300 group-hover:scale-125">✓</div>
                 <p className="text-black flex-grow">{item}</p>

@@ -15,7 +15,15 @@ export default function Home() {
         <meta name="description" content="Grow your business with our digital marketing solutions." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-[#ffffff] min-h-screen">
+      <div 
+        className="bg-[#ffffff] min-h-screen w-screen max-w-none overflow-x-hidden"
+        style={{ 
+          width: '100vw', 
+          maxWidth: 'none',
+          margin: '0',
+          padding: '0'
+        }}
+      >
         <Hero />
         <Impact />
         <TiltCardSection />

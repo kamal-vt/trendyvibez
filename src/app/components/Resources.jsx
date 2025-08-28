@@ -55,7 +55,7 @@ export default function Resources() {
     {
       title: "SEO Guides",
       subtitle: "Proven Frameworks",
-      description: "Clear, actionable guides to help you climb search rankings and stay competitive in any market.",
+      description: "Actionable guides to help you climb search rankings and stay competitive in any market.",
       featured: "The Modern SEO Blueprint",
       icon: "/seooico.png",
       buttonText: "Dive"
@@ -71,7 +71,7 @@ export default function Resources() {
   ];
 
   return (
-    <section ref={sectionRef} className="text-gray-800 py-10 px-6 relative bg-white rounded-4xl" style={{
+    <section ref={sectionRef} className="text-gray-800 py-10 px-4 sm:px-6 relative bg-white rounded-4xl w-full" style={{
       // background: 'linear-gradient(120deg, #ef4444, #8b5cf6, #3b82f6)'
     }}>
       {/* Zoom Image */}
@@ -89,7 +89,7 @@ export default function Resources() {
         />
       </div>
       
-      <div className="max-w-6xl mx-auto">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Resources</h2>
           <p className="text-xl text-gray-800 max-w-3xl mx-auto">
@@ -116,7 +116,7 @@ export default function Resources() {
                     ? 'linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1)'
                     : 'white'
                 }}>
-                  <div className="text-center shadow-sm  mb-6  rounded-2xl  p-2 ">
+                  <div className="text-center shadow-sm  mb-6  rounded-2xl  p-2 bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] ">
                     <div className="text-6xl mb-4 filter drop-shadow-lg ">
                       {resource.icon.startsWith('/') ? (
                         <img 
@@ -128,7 +128,7 @@ export default function Resources() {
                         resource.icon
                       )}
                     </div>
-                    <h3 className="text-2xl font-bold mb-2 bg-purple text-gray-800">{resource.title}</h3>
+                    <h3 className="text-2xl font-bold mb-2 bg-purple text-white">{resource.title}</h3>
                     <div className="font-bold text-lg mb-4 text-white">
                       {resource.subtitle}
                     </div>
@@ -149,7 +149,7 @@ export default function Resources() {
                     <button 
                       className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl ${
                         hoveredCard === index 
-                          ? 'bg-black  hover:bg-white text-white' 
+                          ? 'bg-black  hover:bg-red text-white' 
                           : 'bg-black hover:bg-yellow-700 text-white'
                       }`}
                       onClick={() => {

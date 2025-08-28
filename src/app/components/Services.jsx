@@ -12,110 +12,140 @@ export default function Services() {
       title: "SEO Services",
       tagline: "Be visible. Be found. Be chosen.",
       stat: "+300% Organic Traffic",
-      description: "We optimize your digital presence to rank higher, attract more organic traffic, and dominate search results.",
+      description:
+        "We optimize your digital presence to rank higher, attract more organic traffic, and dominate search results.",
       features: [
         "Technical SEO Audits",
-        "On-Page Optimization", 
+        "On-Page Optimization",
         "Keyword Strategy",
-        "Link Building"
+        "Link Building",
+        "Local SEO",
+        "Content Optimization",
+        "SEO Reporting & Analytics"
       ],
-      illustration: "/images/seoimg.jpg" // SEO Services image
+      illustration: "/images/seoimg.jpg"
     },
     {
       title: "Paid Advertising",
       tagline: "Every click counts. Every ad earns.",
       stat: "+250% ROAS",
-      description: "Performance-driven campaigns across Google, Facebook, Instagram, LinkedIn that convert clicks into customers.",
+      description:
+        "Performance-driven campaigns across Google, Facebook, Instagram, LinkedIn that convert clicks into customers.",
       features: [
         "Campaign Strategy & Setup",
         "Audience Targeting",
-        "Ad Creative Development", 
-        "Performance Optimization"
+        "Ad Creative Development",
+        "Performance Optimization",
+        "Remarketing Campaigns",
+        "A/B Testing",
+        "Conversion Tracking"
       ],
-      illustration: "/images/paidimg.jpg" // Paid Advertising image
+      illustration: "/images/paidimg.jpg"
     },
     {
       title: "Social Media Management",
       tagline: "Build communities. Drive engagement.",
       stat: "+400% Engagement",
-      description: "Strategic social media management that builds brand awareness,fosters meaningful connections with  audience.",
+      description:
+        "Strategic social media management that builds brand awareness and fosters meaningful connections with your audience.",
       features: [
         "Content Strategy",
         "Community Management",
         "Social Advertising",
-        "Analytics & Reporting"
+        "Analytics & Reporting",
+        "Platform Growth Tactics",
+        "Influencer Collaboration",
+        "Social Listening & Monitoring"
       ],
-      illustration: "/images/socialimg.jpg" // Social Media Management image
+      illustration: "/images/socialimg.jpg"
     },
     {
       title: "Content Strategy",
       tagline: "We turn ambition into action",
       stat: "+200% Conversions",
-      description: "We create content that not only tells your story but drives action. Every blog, script, and email is crafted to command trust",
+      description:
+        "We create content that not only tells your story but drives action. Every blog, script, and email is crafted to command trust.",
       features: [
         "SEO Blog Content",
         "Video Script Writing",
         "Email Copywriting",
-        "Brand Storytelling"
+        "Brand Storytelling",
+        "Content Calendar Planning",
+        "Copy Audits & Rewrites",
+        "Landing Page Content"
       ],
-      illustration: "/images/contentimg.jpg" // Content Strategy image
+      illustration: "/images/contentimg.jpg"
     },
     {
       title: "Brand Development",
-      tagline: "We build Brand that staysa",
+      tagline: "We build brands that stay",
       stat: "+150% Brand Recognition",
-      description: "We help you craft a brand that goes beyond a logo one that's instantly recognizable and built to connect with your ideal audience",
+      description:
+        "We help you craft a brand that goes beyond a logo—one that's instantly recognizable and built to connect with your ideal audience.",
       features: [
         "Brand Identity Design",
         "Voice & Messaging",
         "Brand Guidelines",
-        "Market Positioning"
+        "Market Positioning",
+        "Logo & Visual Elements",
+        "Competitor Analysis",
+        "Customer Persona Development"
       ],
-      illustration: "/images/brandimg.jpg" // Brand Development image
+      illustration: "/images/brandimg.jpg"
     },
-   
     {
       title: "Web Designing",
       tagline: "We craft futuristic, user-focused designs that blend creativity.",
       stat: "100% Responsive Designs",
-      description: "From sleek landing pages to full-scale websites, we design interfaces that engage, inspire, and convert.",
+      description:
+        "From sleek landing pages to full-scale websites, we design interfaces that engage, inspire, and convert.",
       features: [
         "UI/UX Wireframing",
         "Responsive Layouts",
         "Brand-Centric Aesthetics",
-        "Interactive Prototypes"
+        "Interactive Prototypes",
+        "Design System Creation",
+        "Accessibility Design",
+        "Cross-Browser Compatibility"
       ],
-      illustration: "/images/webdesignn.jpg" // Web Designing image
+      illustration: "/images/webdesignn.jpg"
     },
     {
       title: "Web Development",
       tagline: "We build scalable, fast, and secure websites",
       stat: "99.9% Uptime Guarantee",
-      description: "Our development team ensures your website is more than just good-looking—it’s powerful, secure, and optimized. ",
+      description:
+        "Our development team ensures your website is more than just good-looking—it’s powerful, secure, and optimized.",
       features: [
         "Custom Website Development",
         "E-commerce Solutions",
         "API Integrations",
-        "Performance Optimization"
+        "Performance Optimization",
+        "CMS Integration",
+        "Security Hardening",
+        "Version Control & Git Workflow"
       ],
-      illustration: "/images/webdev.jpg" // Web Development image
+      illustration: "/images/webdev.jpg"
     },
     {
       title: "Deployment",
       tagline: "We handle smooth and secure deployments",
       stat: "Zero-Downtime Launch",
-      description: "From staging to production, we manage every step of your deployment process. ",
+      description:
+        "From staging to production, we manage every step of your deployment process.",
       features: [
         "Cloud Hosting Setup",
         "CI/CD Pipelines",
         "SSL & Security Integration",
-        "24/7 Monitoring & Support"
+        "24/7 Monitoring & Support",
+        "Environment Configuration",
+        "Load Testing & Staging",
+        "Automated Rollbacks"
       ],
-      illustration: "/images/deploye.png" // Deployment image
+      illustration: "/images/deploye.png"
     }
-        
   ];
-
+  
   // Auto-scroll functionality
   useEffect(() => {
     const interval = setInterval(() => {
@@ -161,7 +191,7 @@ export default function Services() {
           const currentTopPosition = scrollProgress * maxBottomPosition;
 
           const scrollDelta = currentScrollY - lastScrollY;
-          const rotationSpeed = 1;
+          const rotationSpeed = 0.5;
           totalRotation += scrollDelta * rotationSpeed;
           totalRotationLeft += scrollDelta * rotationSpeed;
 
@@ -214,7 +244,7 @@ export default function Services() {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative max-w-3xl mx-auto  bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e]  rounded-3xl p-8 md:p-12 shadow-2xl">
+        <div className="relative max-w-4xl mx-auto bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] rounded-3xl p-4 md:p-6 shadow-2xl">
           <div className="overflow-hidden rounded-2xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
@@ -222,21 +252,21 @@ export default function Services() {
             >
               {services.map((service, index) => (
                 <div key={index} className="w-full flex-shrink-0">
-                  <div className="bg-white  rounded-2xl text-black p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <div className="grid md:grid-cols-2 text-black gap-8">
+                  <div className="bg-white rounded-2xl text-black p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 h-[500px] md:h-[600px] flex flex-col">
+                    <div className="grid md:grid-cols-2 gap-6 md:gap-8 h-full">
                       {/* Left Side - Illustration */}
-                      <div className="flex items-center justify-center">
-                        <div className="w-full">
+                      <div className="flex items-center justify-center h-full p-4">
+                        <div className="w-full h-full flex items-center justify-center">
                           {service.illustration.startsWith('/') ? (
-                            <div className="w-full rounded-2xl text-black overflow-hidden  ">
+                            <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
                               <img 
                                 src={service.illustration} 
                                 alt={service.title}
-                                className="w-full h-auto object-contain"
+                                className="w-full h-full object-cover"
                               />
                             </div>
                           ) : (
-                            <div className="w-full rounded-2xl text-black bg-gradient-to-br from-coral-pink to-dusty-rose flex items-center justify-center border-4 border-black min-h-80">
+                            <div className="w-full h-full rounded-2xl bg-gradient-to-br from-coral-pink to-dusty-rose flex items-center justify-center border-4 border-black shadow-lg">
                               <div className="text-4xl text-black">{service.illustration}</div>
                             </div>
                           )}
@@ -244,24 +274,24 @@ export default function Services() {
                       </div>
 
                       {/* Right Side - Content */}
-                      <div className="space-y-6 text-black flex flex-col justify-center">
+                      <div className="flex flex-col justify-start space-y-3 md:space-y-4 text-black h-full pt-4">
                         <div>
-                          <h3 className="text-2xl font-bold mb-2 text-gray-800">{service.title}</h3>
-                          <p className="text-l text-gray-600 mb-4">{service.tagline}</p>
-                          <div className="text-xl font-bold text-coral-pink">
+                          <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-800">{service.title}</h3>
+                          <p className="text-xs md:text-sm text-gray-600 mb-2">{service.tagline}</p>
+                          <div className="text-base md:text-lg font-bold text-coral-pink">
                             {service.stat}
                           </div>
                         </div>
 
-                        <p className="text-gray-700 leading-relaxed">
+                        <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
                           {service.description}
                         </p>
 
-                        <div className="space-y-3">
+                        <div className="space-y-1 md:space-y-2 flex-1">
                           {service.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center space-x-3 bg-gray-50 rounded-lg p-3 border border-gray-200">
-                              <span className="text-coral-pink">⭐</span>
-                              <span className="text-gray-800">{feature}</span>
+                            <div key={idx} className="flex items-center space-x-2 bg-gray-50 rounded-lg p-2 border border-gray-200">
+                              <span className="text-coral-pink text-xs md:text-sm">⭐</span>
+                              <span className="text-gray-800 text-xs md:text-sm">{feature}</span>
                             </div>
                           ))}
                         </div>
@@ -274,12 +304,12 @@ export default function Services() {
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-3">
+          <div className="flex justify-center mt-6 space-x-2 md:space-x-3">
             {services.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-4 h-4 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg ${
+                className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg ${
                   index === currentSlide ? 'bg-coral-pink shadow-lg scale-110' : 'bg-gray-300 hover:bg-coral-pink'
                 }`}
               />

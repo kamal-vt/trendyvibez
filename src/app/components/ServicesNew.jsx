@@ -172,7 +172,7 @@ export default function ServicesNew() {
   ];
 
   return (
-    <section ref={sectionRef} className="text-white py-20 px-6 bg-white relative">
+    <section ref={sectionRef} className="text-white py-16 sm:py-20 px-4 sm:px-6 bg-white relative w-full">
       {/* Magnet Image with scroll movement */}
       <div 
         className="absolute top-10 right-1/4 z-10 pointer-events-none"
@@ -181,14 +181,14 @@ export default function ServicesNew() {
           transition: 'transform 0.1s ease-out'
         }}
       >
-        <img 
+        {/* <img 
           src="/magnet.png" 
           alt="Magnet decoration" 
           className="w-32 h-32 md:w-40 md:h-40 object-contain"
-        />
+        /> */}
       </div>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl  text-black font-bold mb-4">Services</h2>
           <p className="text-xl text-black max-w-3xl mx-auto">
@@ -239,7 +239,7 @@ export default function ServicesNew() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 auto-rows-[minmax(0,1fr)] items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 auto-rows-[minmax(0,1fr)] ">
             {services.map((service, index) => {
               const isHovered = hoveredIndex === index;
               return (
@@ -252,7 +252,7 @@ export default function ServicesNew() {
                 >
                   <ParallaxCard intensity={10} className="h-full">
                     <div
-                      className={`rounded-2xl p-8  transition-all duration-300 ease-in-out cursor-pointer group h-full flex flex-col justify-between gap-4 ${
+                      className={`rounded-2xl p-8  transition-all duration-300 ease-in-out cursor-pointer group  flex flex-col justify-between gap-4 ${
                         isHovered ? "shadow-2xl" : "bg-white border-black shadow-2xl"
                       }`}
                       style={{

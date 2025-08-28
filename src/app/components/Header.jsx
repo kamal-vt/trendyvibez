@@ -77,7 +77,7 @@ export default function Header() {
               <Link
                 key={id}
                 href={href}
-                className={`transition-all duration-300 relative hover:text-white ${
+                className={`transition-all duration-300 relative hover:text-[#494949] ${
                   pathname === href ? "text-orange-700 font-extrabold" : "text-[#494949] font-bold"
                 } ${
                   clickedElement === id

@@ -40,22 +40,23 @@ export default function TiltCardSection() {
   };
 
   return (
-    <section className="py-20 px-6 bg-gray-50 border-b border-[#c0c0c0]">
+    <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50 border-b border-[#c0c0c0] w-full">
       <div className="max-w-8xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
             How we work
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
           Here’s how we turn your vision into measurable growth.
           </p>
         </div>
 
+        {/* Desktop: Overlapping cards with tilt effect */}
         <div
           ref={sectionRef}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          className="relative w-11/12 m-auto flex justify-center items-center min-h-[300px]"
+          className="relative w-11/12 m-auto hidden md:flex justify-center items-center min-h-[300px]"
         >
           {images.map((img, idx) => {
             const { x, y } = getCardOffset(idx);
@@ -84,6 +85,34 @@ export default function TiltCardSection() {
               </div>
             );
           })}
+        </div>
+
+        {/* Mobile: Vertical stack of cards */}
+        <div className="md:hidden space-y-6 px-4">
+          {images.map((img, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-xl"
+            >
+              <div className="flex items-center space-x-4">
+                <div className="flex-shrink-0">
+                  <img
+                    src={img.src}
+                    alt={img.title}
+                    className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">
+                    {img.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    {img.subtitle}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

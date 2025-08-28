@@ -72,27 +72,27 @@ export default function Industries() {
   return (
     <section
       id="industries"
-      className="relative min-h-screen bg-white px-4 sm:px-6 py-16 md:py-24"
+      className="relative min-h-screen bg-white px-4 sm:px-6 py-12 sm:py-16 md:py-24"
     >
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section header */}
-        <div className="text-center mb-14">
-          <div className="inline-flex items-center px-6 py-3  backdrop-blur-md rounded-full border border-black/20 mb-6" >
-            <span className="text-sm text-black font-medium">
+        <div className="text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 backdrop-blur-md rounded-full border border-black/20 mb-4 sm:mb-6" >
+            <span className="text-xs sm:text-sm text-black font-medium">
               🏭 Industry Expertise
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-black">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black">
             Industries We Empower
           </h2>
-          <p className="mt-4 text-lg md:text-xl text-black/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-black/70 max-w-3xl mx-auto leading-relaxed px-4">
             We craft digital strategies that adapt to your industry, connect with your
             audience, and move your brand forward.
           </p>
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {industries.map((industry, index) => (
             <motion.div
               key={index}
@@ -102,13 +102,13 @@ export default function Industries() {
               onMouseLeave={() => setHoveredCard(null)}
             >
               <div
-                className={`p-8 rounded-3xl bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] text-white shadow-xl backdrop-blur-lg border border-white/20 transition-all duration-300 ${
+                className={`p-6 sm:p-8 rounded-3xl bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] text-white shadow-xl backdrop-blur-lg border border-white/20 transition-all duration-300 ${
                   hoveredCard === index ? "shadow-2xl shadow-white/20" : ""
                 }`}
               >
                 <div className="text-center mb-6">
-                  <div className="text-4xl mb-4">{industry.icon}</div>
-                  <h3 className="text-2xl font-bold">{industry.title}</h3>
+                  <div className="text-3xl sm:text-4xl mb-4">{industry.icon}</div>
+                  <h3 className="text-xl sm:text-2xl font-bold">{industry.title}</h3>
                 </div>
 
                 <p className="mb-6 text-white/90 leading-relaxed">
@@ -138,7 +138,6 @@ export default function Industries() {
 
       {/* background glow elements */}
       <div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-pink-500/20 rounded-full blur-[140px]" />
-      <div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] bg-blue-500/20 rounded-full blur-[140px]" />
     </section>
   );
 }
