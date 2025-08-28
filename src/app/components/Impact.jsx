@@ -49,12 +49,12 @@ export default function Impact() {
           
           // Calculate the vertical position within the section (top to bottom)
           const maxTopPosition = 0; // Start at top
-          const maxBottomPosition = sectionHeight - 80; // End near bottom (accounting for image height)
+          const maxBottomPosition = sectionHeight - 90; // End near bottom (accounting for image height)
           const currentTopPosition = scrollProgress * maxBottomPosition;
           
           // Calculate continuous rotation based on scroll direction and amount
           const scrollDelta = currentScrollY - lastScrollY;
-          const rotationSpeed = 2 // Adjust this value to control rotation speed
+          const rotationSpeed = 0.5// Adjust this value to control rotation speed
           totalRotation += scrollDelta * rotationSpeed;
           totalRotationLeft += scrollDelta * rotationSpeed;
           

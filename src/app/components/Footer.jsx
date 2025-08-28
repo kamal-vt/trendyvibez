@@ -18,10 +18,20 @@ const Footer = () => {
           {/* Brand + Socials */}
           <div>
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center text-white font-bold text-xl">T</div>
-              <div>
+              <motion.div
+                className="w-120px px-4 p-2  rounded-2xl  flex items-center justify-center"
+                whileHover={{ scale: 1.15, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <img 
+                  src="/4.png" 
+                  alt="Trendy Vibes Logo"
+                  className="object-contain "
+                />
+              </motion.div>
+              {/* <div>
                 <p className="text-2xl font-semibold tracking-wide">Trendy Vibes</p>
-              </div>
+              </div> */}
             </div>
             <p className="text-white/70 text-m leading-6 max-w-md">
               Follow what lights you up with fearless imagination, shaping your own path without worrying about tradition.

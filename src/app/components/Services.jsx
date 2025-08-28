@@ -85,7 +85,7 @@ export default function Services() {
         "Brand-Centric Aesthetics",
         "Interactive Prototypes"
       ],
-      illustration: "/webd.webp" // Web Designing image
+      illustration: "/images/webdesignn.jpg" // Web Designing image
     },
     {
       title: "Web Development",
@@ -98,7 +98,7 @@ export default function Services() {
         "API Integrations",
         "Performance Optimization"
       ],
-      illustration: "/images/web-development.jpg" // Web Development image
+      illustration: "/images/webdev.jpg" // Web Development image
     },
     {
       title: "Deployment",
@@ -111,7 +111,7 @@ export default function Services() {
         "SSL & Security Integration",
         "24/7 Monitoring & Support"
       ],
-      illustration: "/images/deployment.jpg" // Deployment image
+      illustration: "/images/deploye.png" // Deployment image
     }
         
   ];

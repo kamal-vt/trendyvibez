@@ -1,96 +1,41 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import TiltCard from './TiltCard';
 
 export default function TiltCardSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const rafRef = useRef<number | null>(null);
-  const targetNormRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
-  const currentNormRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
-  const [normOffset, setNormOffset] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    if (!sectionRef.current) return;
 
-    const onMouseMove = (e: MouseEvent) => {
-      const rect = el.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const nx = ((e.clientX - cx) / (rect.width / 2)); // -1..1
-      const ny = ((e.clientY - cy) / (rect.height / 2)); // -1..1
-      // Clamp to safe range
-      targetNormRef.current.x = Math.max(-1, Math.min(1, nx));
-      targetNormRef.current.y = Math.max(-1, Math.min(1, ny));
-      startRAF();
-    };
+    const rect = sectionRef.current.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 2 - 1; // -1 → 1
+    const y = ((e.clientY - rect.top) / rect.height) * 2 - 1; // -1 → 1
 
-    const onMouseLeave = () => {
-      targetNormRef.current = { x: 0, y: 0 };
-      startRAF();
-    };
-
-    el.addEventListener('mousemove', onMouseMove);
-    el.addEventListener('mouseleave', onMouseLeave);
-    return () => {
-      el.removeEventListener('mousemove', onMouseMove);
-      el.removeEventListener('mouseleave', onMouseLeave);
-    };
+    setMousePosition({ x, y });
   }, []);
 
-  const startRAF = () => {
-    if (rafRef.current != null) return;
-    const step = () => {
-      const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
-      currentNormRef.current.x = lerp(currentNormRef.current.x, targetNormRef.current.x, 0.1);
-      currentNormRef.current.y = lerp(currentNormRef.current.y, targetNormRef.current.y, 0.1);
-      setNormOffset({ ...currentNormRef.current });
-
-      const dx = Math.abs(currentNormRef.current.x - targetNormRef.current.x);
-      const dy = Math.abs(currentNormRef.current.y - targetNormRef.current.y);
-      if (dx + dy < 0.002) {
-        rafRef.current = null;
-        return;
-      }
-      rafRef.current = requestAnimationFrame(step);
-    };
-    rafRef.current = requestAnimationFrame(step);
-  };
+  const handleMouseLeave = useCallback(() => {
+    setMousePosition({ x: 0, y: 0 });
+    setHoverIndex(null);
+  }, []);
 
   const images = [
-    { 
-      src: '/d1.jpg', 
-      title: 'SEO Optimization', 
-      subtitle: 'Search Engine Excellence' 
-    },
-    { 
-      src: '/d2.jpg', 
-      title: 'Paid Advertising', 
-      subtitle: 'Targeted Campaigns' 
-    },
-    { 
-      src: '/d3.jpg', 
-      title: 'Social Media', 
-      subtitle: 'Community Building' 
-    },
-    { 
-      src: '/d4.jpg', 
-      title: 'Content Strategy', 
-      subtitle: 'Strategic Storytelling' 
-    },
-    { 
-      src: '/d6.jpg', 
-      title: 'Brand Development', 
-      subtitle: 'Identity Creation' 
-    }
+    { src: '/e1.png', title: 'We Understand', subtitle: 'Insights that Inspire Growth' },
+    { src: '/e2.png', title: 'We Create', subtitle: 'Ideas that Spark Engagement' },
+    { src: '/e3.png', title: 'We Design', subtitle: 'Experiences that Resonate' },
+    { src: '/e4.png', title: 'We Implement', subtitle: 'Strategies that Drive Impact' },
+    { src: '/e5.png', title: 'We Scale', subtitle: 'Brands that Leave a Mark' }
   ];
 
   const getCardOffset = (index: number) => {
-    const depthFactor = (index + 1) / images.length; // 0..1
-    const maxTranslate = 40; // px
-    const x = normOffset.x * maxTranslate * depthFactor;
-    const y = normOffset.y * maxTranslate * depthFactor;
+    const depthFactor = (index + 1) / images.length;
+    const maxTranslate = 30;
+    const x = mousePosition.x * maxTranslate * depthFactor;
+    const y = mousePosition.y * maxTranslate * depthFactor;
     return { x, y };
   };
 
@@ -99,30 +44,43 @@ export default function TiltCardSection() {
       <div className="max-w-8xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Our Expertise
+            How we work
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our core services through interactive cards that showcase our digital marketing expertise.
+          Here’s how we turn your vision into measurable growth.
           </p>
         </div>
 
-        <div 
+        <div
           ref={sectionRef}
-          className="relative flex flex-wrap justify-center items-center gap-8 min-h-[300px]"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          className="relative w-11/12 m-auto flex justify-center items-center min-h-[300px]"
         >
           {images.map((img, idx) => {
             const { x, y } = getCardOffset(idx);
+            const baseOffset = idx * 200;
+            const rotation = (idx - (images.length - 1) / 2) * 5;
+
+            // --- Neighbor influence calculation ---
+            let scale = 1;
+            if (hoverIndex === idx) {
+              scale = 1.05; // full hover card
+            } else if (hoverIndex === idx - 1 || hoverIndex === idx + 1) {
+              scale = 1.0375; // 75% of effect for neighbors
+            }
+
             return (
               <div
                 key={idx}
-                className="transition-transform duration-200 ease-out"
-                style={{ transform: `translate3d(${x}px, ${y}px, 0)` }}
+                onMouseEnter={() => setHoverIndex(idx)}
+                className="absolute left-36 transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
+                style={{
+                  transform: `translate3d(${x + baseOffset}px, ${y}px, 0) rotate(${rotation}deg) scale(${scale})`,
+                  zIndex: images.length - idx,
+                }}
               >
-                <TiltCard
-                  imageSrc={img.src}
-                  // title={img.title}
-                  // subtitle={img.subtitle}
-                />
+                <TiltCard imageSrc={img.src} />
               </div>
             );
           })}

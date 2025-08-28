@@ -52,8 +52,8 @@ export default function HeroSection() {
 	const handleMouseMove = (e) => {
 		const { clientX, clientY } = e;
 		const { innerWidth, innerHeight } = window;
-		const x = (clientX / innerWidth - 0.5) * 2;
-		const y = (clientY / innerHeight - 0.5) * 2;
+		const x = (clientX / innerWidth - 0.5) * 5;
+		const y = (clientY / innerHeight - 0.5) * 5;
 		setMousePosition({ x, y });
 		setIsMouseMoving(true);
 	};
@@ -62,7 +62,7 @@ export default function HeroSection() {
 		<section
 			className="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
 			style={{ 
-				marginTop: '-80px',
+				marginTop: '-40px',
 				paddingTop: '80px'
 			}}
 			onMouseMove={handleMouseMove}
@@ -114,7 +114,7 @@ export default function HeroSection() {
 						</div>
 
 						<div className="space-y-3 md:space-y-4">
-							<h1 className="font-extrabold leading-[1] tracking-tight p-0 text-[2.6rem] sm:text-6xl md:text-5xl lg:text-[7.5rem]">
+							<h1 className="font-extrabold leading-[1] tracking-tight p-0 text-[2.6rem] sm:text-6xl md:text-3xl lg:text-[5.5rem]">
 								<span className="block text-white">Grow Faster Through</span>
 								<span className="block text-white">Smarter <span className="text-coral-pink">Marketing</span></span>
 							</h1>
