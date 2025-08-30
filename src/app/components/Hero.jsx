@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { IoMdStar } from "react-icons/io";
 
 export default function HeroSection() {
   const router = useRouter();
@@ -18,7 +19,7 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setDrift({
-        x: (Math.random() - 0.5) * 12,
+        x: (Math.random() - 0.5) * 42,
         y: (Math.random() - 0.5) * 10,
       });
     }, 1400);
@@ -28,7 +29,7 @@ export default function HeroSection() {
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
     const { innerWidth, innerHeight } = window;
-    const x = (clientX / innerWidth - 0.5) * 5;
+    const x = (clientX / innerWidth - 0.5) * 10;
     const y = (clientY / innerHeight - 0.5) * 5;
     setMousePosition({ x, y });
     setIsMouseMoving(true);
@@ -78,8 +79,18 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 gap-6 md:gap-10 items-center justify-items-center text-center">
           <div className="space-y-4 sm:space-y-6 md:space-y-8">
             {/* Heading with per-letter hover */}
+            
+
+           <p className="inline-flex items-center text-center justify-center gap-2 px-6 py-3   rounded-2xl text-base sm:text-lg md:text-xl lg:text-2xl text-white leading-relaxed font-light shadow-lg"> 
+  <IoMdStar className="text-[#126be7] text-3xl shadow-2xl" />
+  Digital Marketing Agency
+  
+  <IoMdStar className="text-[#126be7] text-3xl shadow-2xl" /> 
+</p> 
+
+
             <div className="space-y-3 md:space-y-4">
-              <h1 className="font-extrabold leading-tight tracking-tight text-[2rem] sm:text-3xl md:text-4xl lg:text-[5.5rem]">
+              <h1 className="font-extrabold leading-tight tracking-tight text-[rem] sm:text-3xl md:text-4xl lg:text-[5.5rem] text-center">
                 {headingLines.map((line, lineIndex) => (
                   <span key={lineIndex} className="block whitespace-nowrap">
                     {line.split(" ").map((word, wordIndex) => (
@@ -108,15 +119,10 @@ export default function HeroSection() {
               </h1>
             </div>
 
-            {/* Subheading */}
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/85 max-w-3xl mx-auto leading-relaxed font-light px-2 sm:px-0">
-              Elevate your business by aligning creativity with data-driven marketing.
-            </p>
-
             {/* CTA Button */}
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-6 sm:pt-8 justify-center">
               <button
-                className="group relative px-8 sm:px-8 md:px-10 py-4 sm:py-4 md:py-5 bg-gradient-to-r from-coral-pink to-dusty-rose text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-coral-pink/25 hover:scale-105 text-base sm:text-base md:text-lg w-full sm:w-auto min-h-[48px] sm:min-h-0"
+                className="group relative px-8 sm:px-8 md:px-10 py-4 sm:py-4 md:py-5 bg-gradient-to-r from-coral-pink to-dusty-rose hover:from-[#932d42] hover:to-[#1f2f77] text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-[#932d42]/25 hover:scale-105 text-base sm:text-base md:text-lg w-full sm:w-auto min-h-[48px] sm:min-h-0"
                 onClick={() => router.push("/lets-talk")}
               >
                 <span className="relative z-10 flex items-center justify-center gap-3 sm:gap-3">

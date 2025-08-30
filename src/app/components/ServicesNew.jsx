@@ -122,7 +122,7 @@ export default function ServicesNew() {
     },
     {
       icon: "/webd.webp",
-      title: "web Design",
+      title: "Web Design",
       short: "We built futuristic design which impress and outstand.",
       details: [
         "Conversion-focused landing pages built to maximize leads.",
@@ -137,7 +137,7 @@ export default function ServicesNew() {
     {
       icon: "/wedev.png",
       title: "Web Development",
-      short: "Future-ready web development for growing brands.",
+      short: "Future-ready  frontend development for growing brands.",
       details: [
         "Custom-coded solutions tailored to your business needs.",
         "Responsive, mobile-first layouts for every device.",
@@ -203,9 +203,9 @@ export default function ServicesNew() {
             <div className="bg-brand-card backdrop-blur-lg p-10 border border-white/30 shadow-2xl relative rounded-4xl">
               <button
                 onClick={() => setActiveIndex(null)}
-                className="absolute top-4 right-4 text-sm px-3 py-1 bg-gray-800 rounded-full hover:bg-gray-700 transition linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1"
+                className="absolute top-4 right-4 text-sm px-3 py-1 bg-[#4A7CCA] rounded-full hover:bg-[#4A7CCA] transition linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6  bg-[#4A7CCA]">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -224,11 +224,11 @@ export default function ServicesNew() {
                   <p className="text-black mb-4">
                     {services[activeIndex].short}
                   </p>
-                  <div className="grid  grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                  <div className="grid  grid-cols-1 sm:grid-cols-2 gap-6 mt-3">
                     {services[activeIndex].details.map((point, i) => (
                       <div
                         key={i}
-                        className=" bg-black rounded-lg p-4 border border-white/20"
+                        className=" bg-[#4A7CCA] rounded-lg p-4 border border-white/20"
                       >
                         <p className="text-gray-100">{point}</p>
                       </div>
@@ -252,13 +252,9 @@ export default function ServicesNew() {
                 >
                   <ParallaxCard intensity={10} className="h-full">
                     <div
-                      className={`rounded-2xl p-8  transition-all duration-300 ease-in-out cursor-pointer group  flex flex-col justify-between gap-4 ${
-                        isHovered ? "shadow-2xl" : "bg-white border-black shadow-2xl"
-                      }`}
+                      className={`rounded-2xl p-8  transition-all duration-300 ease-in-out cursor-pointer group  flex flex-col justify-between gap-4 shadow-2xl`}
                       style={{
-                        background: isHovered 
-                          ? 'linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1) '
-                          : 'white'
+                        background: 'linear-gradient(135deg, #4A7CCA, #213279)'
                       }}
                     >
                       <div className="h-36 flex items-center justify-center">
@@ -269,10 +265,10 @@ export default function ServicesNew() {
                         />
                       </div>
                       <div className="flex-1 flex flex-col">
-                        <h3 className="text-xl font-bold mb-2 text-gray-800">
+                        <h3 className="text-xl font-bold mb-2 text-white">
                           {service.title}
                         </h3>
-                        <p className="text-gray-600 leading-relaxed mt-1 flex-1">
+                        <p className="text-white/85 leading-relaxed mt-1 flex-1">
                           {service.short}
                         </p>
                       </div>

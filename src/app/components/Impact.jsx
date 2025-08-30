@@ -2,63 +2,68 @@ import { useState, useEffect, useRef } from 'react';
 
 export default function Impact() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isFixed, setIsFixed] = useState(false);
+  const [showImages, setShowImages] = useState(true);
+  const [navbarHeight, setNavbarHeight] = useState(80);
   const sectionRef = useRef(null);
-  const rollRef = useRef(null);
-  const rollLeftRef = useRef(null);
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-    let totalRotation = 0;
-    let totalRotationLeft = 0;
+    // Dynamically detect navbar height
+    const getNavbarHeight = () => {
+      // Try to find navbar element and get its height
+      const navbar = document.querySelector('nav') || document.querySelector('[role="navigation"]') || document.querySelector('.navbar') || document.querySelector('header');
+      if (navbar) {
+        return navbar.offsetHeight;
+      }
+      // Fallback: try to detect by looking for elements that might be the navbar
+      const possibleNavbar = document.querySelector('[class*="nav"], [class*="header"], [class*="menu"]');
+      if (possibleNavbar) {
+        return possibleNavbar.offsetHeight;
+      }
+      // Default fallback if no navbar found
+      return 80; // Conservative default
+    };
+
+    // Set initial navbar height
+    setNavbarHeight(getNavbarHeight());
 
     const handleScroll = () => {
-      if (sectionRef.current && rollRef.current && rollLeftRef.current) {
+      if (sectionRef.current) {
         const section = sectionRef.current;
-        const rect = section.getBoundingClientRect();
+        const sectionRect = section.getBoundingClientRect();
         const windowHeight = window.innerHeight;
-        const imageContainer = rollRef.current.parentElement;
-        const imageContainerLeft = rollLeftRef.current.parentElement;
-
-        if (rect.bottom > 0 && rect.top < windowHeight) {
-          const sectionTop = rect.top;
-          const sectionHeight = rect.height;
-          const currentScrollY = window.scrollY;
-
-          let scrollProgress = 0;
-          if (sectionTop <= 0 && rect.bottom >= windowHeight) {
-            scrollProgress = Math.abs(sectionTop) / (sectionHeight - windowHeight);
-          } else if (sectionTop > 0) {
-            scrollProgress = 0;
-          } else if (rect.bottom < windowHeight) {
-            scrollProgress = 1;
-          } else {
-            scrollProgress = Math.abs(sectionTop) / sectionHeight;
-          }
-
-          scrollProgress = Math.max(0, Math.min(1, scrollProgress));
-
-          const maxBottomPosition = sectionHeight - 90;
-          const currentTopPosition = scrollProgress * maxBottomPosition;
-
-          const scrollDelta = currentScrollY - lastScrollY;
-          const rotationSpeed = 0.5;
-          totalRotation += scrollDelta * rotationSpeed;
-          totalRotationLeft += scrollDelta * rotationSpeed;
-
-          imageContainer.style.top = `${currentTopPosition}px`;
-          rollRef.current.style.transform = `rotate(${totalRotation}deg)`;
-
-          imageContainerLeft.style.top = `${currentTopPosition}px`;
-          rollLeftRef.current.style.transform = `rotate(${totalRotationLeft}deg)`;
-
-          lastScrollY = currentScrollY;
+        
+        // Check if entire section has scrolled past the viewport
+        if (sectionRect.bottom <= 0) {
+          // Section is completely out of view, hide images
+          setShowImages(false);
+          setIsFixed(false);
+          return;
+        }
+        
+        // Show images when section comes back into view
+        if (sectionRect.bottom > 0) {
+          setShowImages(true);
+        }
+        
+        // Check if section is scrolled up enough to make images fixed
+        // Use actual navbar height + buffer to prevent overlap
+        const bufferSpace = 20; // Extra buffer space
+        if (sectionRect.top <= (navbarHeight + bufferSpace)) {
+          // Section is scrolled up, make images fixed below navbar
+          setIsFixed(true);
+        } else {
+          // Section is in normal position, keep images absolute within section
+          setIsFixed(false);
         }
       }
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+    
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [navbarHeight]);
 
   const impactGroups = [
     {
@@ -67,7 +72,7 @@ export default function Impact() {
           title: "Increased Organic Traffic",
           value: "300%",
           description: "Average organic traffic growth across all client campaigns",
-          color: "text-blue-600"
+          color: "text-yellow-300"
         },
         {
           title: "Improved Conversion Rates",
@@ -83,7 +88,7 @@ export default function Impact() {
           title: "Enhanced Brand Visibility",
           value: "400%",
           description: "Improved brand recognition and market presence",
-          color: "text-blue-600"
+          color: "text-yellow-300"
         },
         {
           title: "ROI Improvement",
@@ -99,7 +104,7 @@ export default function Impact() {
           title: "Customer Engagement",
           value: "320%",
           description: "Increased customer engagement and interaction rates",
-          color: "text-blue-600"
+          color: "text-yellow-300"
         },
         {
           title: "Social Media Growth",
@@ -114,29 +119,36 @@ export default function Impact() {
   return (
     <section
       ref={sectionRef}
-      className="py-16 sm:py-20 px-4 sm:px-6 mt-5 bg-cream-100 relative w-full"
+      className="py-8 sm:py-3 px-4 sm:px-6 mt-3 bg-cream-100 relative w-full"
     >
-      {/* Rolling image on the right */}
-      <div className="absolute right-4 sm:right-8 top-0 z-10 pointer-events-none">
-        <img
-          ref={rollRef}
-          src="/roll.png"
-          alt="Rolling element"
-          className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transition-transform duration-100 ease-out"
-          style={{ transform: 'rotate(0deg)' }}
-        />
-      </div>
+      {/* Rolling images with dynamic navbar height positioning */}
+      {showImages && (
+        <>
+          <div 
+            className={`${isFixed ? 'fixed' : 'absolute'} ${isFixed ? 'top-4' : 'top-4'} left-4 sm:left-8 z-50 pointer-events-none transition-all duration-300 ease-out`}
+            style={isFixed ? { top: `${navbarHeight + 80}px` } : {}}
+          >
+            <img
+              src="/roll.png"
+              alt="Rolling element"
+              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 animate-spin"
+              style={{ animationDuration: '8s' }}
+            />
+          </div>
 
-      {/* Rolling image on the left */}
-      <div className="absolute left-4 sm:left-8 top-0 z-10 pointer-events-none">
-        <img
-          ref={rollLeftRef}
-          src="/roll.png"
-          alt="Rolling element"
-          className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 transition-transform duration-100 ease-out"
-          style={{ transform: 'rotate(0deg)' }}
-        />
-      </div>
+          <div 
+            className={`${isFixed ? 'fixed' : 'absolute'} ${isFixed ? 'top-4' : 'top-4'} right-4 sm:right-8 z-50 pointer-events-none transition-all duration-300 ease-out`}
+            style={isFixed ? { top: `${navbarHeight + 80}px` } : {}}
+          >
+            <img
+              src="/roll.png"
+              alt="Rolling element"
+              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 animate-spin"
+              style={{ animationDuration: '6s' }}
+            />
+          </div>
+        </>
+      )}
 
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="mb-20">
@@ -163,8 +175,8 @@ export default function Impact() {
               onMouseLeave={() => setHoveredIndex(null)}
               style={{
                 background: hoveredIndex === groupIndex
-                  ? 'linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1)'
-                  : 'linear-gradient(135deg, #f8f9fa, #e9ecef)'
+                  ? 'text-white'
+                  : 'linear-gradient(135deg, #4A7CCA, #213279)'
               }}
             >
               <div className="p-6 m-4 min-h-[200px] flex flex-col justify-center">
@@ -173,10 +185,10 @@ export default function Impact() {
                     <div className={`text-4xl md:text-5xl font-bold mb-4 ${item.color}`}>
                       {item.value}
                     </div>
-                    <h3 className="text-base md:text-lg font-semibold mb-3 text-gray-800">
+                    <h3 className="text-base md:text-lg font-semibold mb-3 text-white">
                       {item.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-gray-600">
+                    <p className="text-sm leading-relaxed text-white">
                       {item.description}
                     </p>
 

@@ -15,7 +15,6 @@ export default function Industries() {
       caseStudy:
         "Engineered a 300% surge in user acquisition for a fintech startup through precision-led strategy.",
       icon: "⚙️",
-      // color: "from-pink-500 to-purple-600",
     },
     {
       title: "E-commerce & Retail",
@@ -23,9 +22,8 @@ export default function Industries() {
         "We blend creativity with data to build seamless shopping journeys that spark interest, drive action.",
       metrics: ["200+ Clients Elevated", "+250% Average Growth"],
       caseStudy:
-        "Elevated a fashion retailer's online revenue by 250% through precision targeting .",
+        "Elevated a fashion retailer's online revenue by 250% through precision targeting.",
       icon: "🛍️",
-      // color: "from-red-500 to-orange-500",
     },
     {
       title: "Healthcare & Wellness",
@@ -35,7 +33,6 @@ export default function Industries() {
       caseStudy:
         "Drove a 180% rise in patient appointments for a dental clinic through locally-focused outreach.",
       icon: "💚",
-      // color: "from-emerald-400 to-green-600",
     },
     {
       title: "Education",
@@ -43,9 +40,8 @@ export default function Industries() {
         "Empowering educational institutions with tailored campaigns that connect with learners, enhance engagement.",
       metrics: ["60+ Educators Partnered", "+120% Enrollment Growth"],
       caseStudy:
-        "Achieved a 120% increase in student enrollment for an online university through data-driven targeting.",
+        "Achieved a 120% increase in student enrollment for an university through data-driven targeting.",
       icon: "🎓",
-      // color: "from-indigo-500 to-blue-600",
     },
     {
       title: "Automotive",
@@ -53,21 +49,75 @@ export default function Industries() {
         "Tailored digital strategies that boost dealership traffic and put your automotive brand in the fast lane.",
       metrics: ["45+ Clients Accelerated", "500+ Qualified Leads Monthly"],
       caseStudy:
-        "Generated over 500 qualified leads per month for a car dealership through targeted campaigns.",
+        "Generated over 500 leads per month for a car dealership through targeted campaigns.",
       icon: "🚗",
-      // color: "from-red-500 to-orange-600",
     },
     {
       title: "Real Estate",
       description:
-        "Strategic digital solutions that elevate listings, attract serious buyers, and help real estate professionals close faster.",
+        "Strategic digital solutions that elevate and attract serious buyers, and help real estate professionals close faster.",
       metrics: ["90+ Clients Empowered", "85% Inventory Sold"],
       caseStudy:
         "Enabled a property developer to sell 85% of their inventory in 6 months with high-impact visuals.",
       icon: "🏠",
-      // color: "from-purple-500 to-pink-600",
+    },
+    // New industries
+    {
+      title: "Finance & Banking",
+      description:
+        "Driving growth for financial institutions with campaigns that build trust and convert prospects into clients.",
+      metrics: ["120+ Campaigns Delivered", "+200% Lead Conversion"],
+      caseStudy:
+        "Increased loan applications by 200% for a bank through segmented digital campaigns.",
+      icon: "💳",
+    },
+    {
+      title: "Travel & Hospitality",
+      description:
+        "We create engaging marketing experiences that inspire travelers and boost bookings for resorts, agencies.",
+      metrics: ["70+ Destinations Promoted", "+180% Bookings Growth"],
+      caseStudy:
+        "Boosted hotel bookings by 180% using targeted social campaigns and experiential storytelling.",
+      icon: "✈️",
+    },
+    {
+      title: "Food & Beverage",
+      description:
+        "We help restaurants, brands, and food services build appetizing campaigns that drive loyalty and sales.",
+      metrics: ["100+ Brands Served", "+150% Customer Engagement"],
+      caseStudy:
+        "Increased online orders for a restaurant chain by 150% through influencer collaborations.",
+      icon: "🍔",
+    },
+    {
+      title: "Media & Entertainment",
+      description:
+        "Promoting events, and productions with campaigns that captivate audiences and maximize reach.",
+      metrics: ["50+ Projects Launched", "+300% Audience Growth"],
+      caseStudy:
+        "Doubled viewership for a streaming platform through targeted digital marketing campaigns.",
+      icon: "🎬",
+    },
+    {
+      title: "Sports & Fitness",
+      description:
+        "We elevate sports brands and fitness programs with campaigns that engage fans and drive memberships.",
+      metrics: ["40+ Clubs & Gyms", "+220% Membership Growth"],
+      caseStudy:
+        "Achieved 220% growth in gym memberships for a local chain using performance campaigns.",
+      icon: "🏋️‍♂️",
+    },
+    {
+      title: " Social Impact",
+      description:
+        "Creating campaigns that raise awareness, drive donations,amplify the mission of social organizations.",
+      metrics: ["60+ Causes Supported", "+300% Fundraising Impact"],
+      caseStudy:
+        "Raised 300% more donations for a charity through integrated social campaigns.",
+      icon: "🌍",
     },
   ];
+  
 
   return (
     <section
@@ -137,7 +187,7 @@ export default function Industries() {
       </div>
 
       {/* background glow elements */}
-      <div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-pink-500/20 rounded-full blur-[140px]" />
+      <div className="absolute -top-32 -left-32 w-[400px] h-[400px]  rounded-full blur-[140px]" />
     </section>
   );
 }

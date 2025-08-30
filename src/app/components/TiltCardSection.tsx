@@ -31,8 +31,9 @@ export default function TiltCardSection() {
     { src: '/e5.png', title: 'We Scale', subtitle: 'Brands that Leave a Mark' }
   ];
 
-  const getCardOffset = (index: number) => {
-    const depthFactor = (index + 1) / images.length;
+  const getCardOffset = () => {
+    // Make all cards respond equally to mouse movement
+    const depthFactor = 1;
     const maxTranslate = 30;
     const x = mousePosition.x * maxTranslate * depthFactor;
     const y = mousePosition.y * maxTranslate * depthFactor;
@@ -40,14 +41,14 @@ export default function TiltCardSection() {
   };
 
   return (
-    <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50 border-b border-[#c0c0c0] w-full">
+    <section className="py-16 sm:py-10 px-4 sm:px-6 bg-gray-50  border-[#c0c0c0] w-full">
       <div className="max-w-8xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
             How we work
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-          Here’s how we turn your vision into measurable growth.
+          <p className="text-xl sm:text-xl text-black w-11/12 mx-auto px-4">
+          We Understand → We Discuss → We Create → We Implement → We Scale
           </p>
         </div>
 
@@ -59,7 +60,7 @@ export default function TiltCardSection() {
           className="relative w-11/12 m-auto hidden md:flex justify-center items-center min-h-[300px]"
         >
           {images.map((img, idx) => {
-            const { x, y } = getCardOffset(idx);
+            const { x, y } = getCardOffset();
             const baseOffset = idx * 200;
             const rotation = (idx - (images.length - 1) / 2) * 5;
 

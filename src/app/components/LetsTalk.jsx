@@ -301,7 +301,9 @@ export default function LetsTalk() {
             {whyChoose.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl shadow-[#302b63]  text-white p-6 border border-white/20 flex items-start gap-4 transition-all duration-500 transform hover:scale-110 hover:shadow-2xl group"
+                className="bg-white/10 backdrop-blur-sm rounded-xl  text-white p-6 border border-white/20 flex items-start gap-4 transition-all duration-500 transform hover:scale-110 hover:shadow-2xl "style={{
+                  boxShadow: "0px 10px 20px rgba(48, 43, 99, 0.5)"
+                }}
               >
                 <div className="text-green-600 text-2xl mt-1 transition-transform duration-300 group-hover:scale-125">✓</div>
                 <p className="text-black flex-grow">{item}</p>

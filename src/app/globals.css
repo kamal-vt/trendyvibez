@@ -374,6 +374,6 @@ html, body {
 }
 
 .animate-hero-zoom {
-  animation: heroZoom 16s ease-in-out infinite;
+  animation: heroZoom 8s ease-in-out infinite;
   will-change: transform;
 }

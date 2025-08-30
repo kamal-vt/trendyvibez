@@ -28,7 +28,7 @@ export default function Home() {
         <Impact />
         <TiltCardSection />
         <ServicesNew />
-        <Resources />
+        {/* <Resources /> */}
         <FAQ />
       </div>
     </>

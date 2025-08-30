@@ -109,14 +109,14 @@ export default function Resources() {
                 <div className={`p-8 rounded-2xl  h-full border backdrop-blur-sm transition-all  duration-300 ${
                   hoveredCard === index 
                     ? 'shadow-2xl border-white/40' 
-                    : 'bg-[#ffffff] border-gray-200 shadow-lg'
+                    : 'border-gray-200 shadow-lg'
                 }`}
                 style={{
                   background: hoveredCard === index 
-                    ? 'linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1)'
-                    : 'white'
+                    ? 'linear-gradient(135deg, #4A7CCA, #213279 )'
+                    : 'linear-gradient(135deg, #4A7CCA, #213279)'
                 }}>
-                  <div className="text-center shadow-sm  mb-6  rounded-2xl  p-2 bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] ">
+                  <div className="text-center shadow-sm  mb-6  rounded-2xl  p-2 bg-white ">
                     <div className="text-6xl mb-4 filter drop-shadow-lg ">
                       {resource.icon.startsWith('/') ? (
                         <img 
@@ -128,19 +128,19 @@ export default function Resources() {
                         resource.icon
                       )}
                     </div>
-                    <h3 className="text-2xl font-bold mb-2 bg-purple text-white">{resource.title}</h3>
-                    <div className="font-bold text-lg mb-4 text-white">
+                    <h3 className="text-2xl font-bold mb-2 bg-purple text-black">{resource.title}</h3>
+                    <div className="font-bold text-lg mb-4 text-black">
                       {resource.subtitle}
                     </div>
                   </div>
                   
-                  <p className="mb-6 leading-relaxed text-center text-black">
+                  <p className="mb-6 leading-relaxed text-center text-white">
                     {resource.description}
                   </p>
 
                   <div className="mb-6">
-                    <div className="font-bold mb-2 text-gray-800">Featured</div>
-                    <div className="text-sm text-black">
+                    <div className="font-bold mb-2 text-white">Featured</div>
+                    <div className="text-sm text-white">
                       {resource.featured}
                     </div>
                   </div>
@@ -149,8 +149,8 @@ export default function Resources() {
                     <button 
                       className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl ${
                         hoveredCard === index 
-                          ? 'bg-black  hover:bg-red text-white' 
-                          : 'bg-black hover:bg-yellow-700 text-white'
+                          ? 'bg-white  hover:bg-red text-black' 
+                          : 'bg-white hover:bg-yellow-700 text-black'
                       }`}
                       onClick={() => {
                         if (resource.title === "Blog Articles") {
