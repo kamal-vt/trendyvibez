@@ -63,7 +63,7 @@ export default function HeroSection() {
         }}
       >
         <img
-          src="/h1-rendering.png"
+          src="/rubixx.png"
           alt="Decorative overlay"
           className="w-24 sm:w-32 md:w-40 lg:w-44 xl:w-52 opacity-90 mix-blend-screen drop-shadow-xl select-none"
           onError={handleOverlayError}

@@ -64,7 +64,7 @@ const Footer = () => {
                   // { name: "Resources", href: "/resources" },
                   { name: "Contact Us", href: "/lets-talk" },
                   { name: "Privacy policy", href: "/" },
-                  // { name: "Refund policy", href: "/" },
+                  { name: "Refund policy", href: "/" },
                   { name: "Terms and conditions", href: "/" },
                 ].map((link) => (
                   <li key={link.name}>

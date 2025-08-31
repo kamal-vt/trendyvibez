@@ -23,7 +23,7 @@ const servicesData = [
     stat: "Instant Leads",
     description:
       "Paid advertising delivers instant exposure, leads, and measurable results across Google, social media, and display networks.",
-    illustration: "/images/paidads.avif",
+    illustration: "/images/paidimg.jpg",
     features: [
       "Instant visibility and reach",
       "Precise audience targeting",

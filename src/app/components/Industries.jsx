@@ -122,12 +122,12 @@ export default function Industries() {
   return (
     <section
       id="industries"
-      className="relative min-h-screen bg-white px-4 sm:px-6 py-12 sm:py-16 md:py-24"
+      className="relative min-h-screen bg-white px-4 sm:px-6 py-6 sm:py-8 md:py-12"
     >
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-10 sm:mb-14">
-          <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 backdrop-blur-md rounded-full border border-black/20 mb-4 sm:mb-6" >
+          <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py backdrop-blur-md rounded-full border border-black/20 mb-4 sm:mb-6" >
             <span className="text-xs sm:text-sm text-black font-medium">
               🏭 Industry Expertise
             </span>

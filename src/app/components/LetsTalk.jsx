@@ -121,7 +121,7 @@ export default function LetsTalk() {
   return (
     <section
       id="lets-talk"
-      className="min-h-screen text-black py-20 px-6 bg-white"
+      className="min-h-screen text-black py-10 px-6 bg-white"
     >
       <div className="max-w-6xl mx-auto space-y-16">
         {/* Hero */}
@@ -313,7 +313,7 @@ export default function LetsTalk() {
         </div>
 
         {/* Free Strategy Session */}
-        <div className="text-center bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-[color:var(--tv-500)]/30">
+        <div className="text-center bg-white/10 backdrop-blur-sm rounded-3xl p-4 border border-white/20 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-[color:var(--tv-500)]/30">
           <h2 className="text-3xl font-bold text-[var(--tv-accent)] mb-4">
             Free Strategy Session
           </h2>

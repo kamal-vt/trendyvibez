@@ -120,54 +120,54 @@ export default function ServicesNew() {
       ],
       color: "text-white",
     },
-    {
-      icon: "/webd.webp",
-      title: "Web Design",
-      short: "We built futuristic design which impress and outstand.",
-      details: [
-        "Conversion-focused landing pages built to maximize leads.",
-        "Responsive, mobile-first layouts for every device.",
-        "Next-gen UI/UX design with smooth animations & interactions.",
-        "Lightning-fast performance optimized for Core Web Vitals.",
-        "SEO-ready architecture for better search visibility.",
-        "Brand-aligned aesthetics with modern visuals.",
-      ],
-      color: "text-white",
-    },
-    {
-      icon: "/wedev.png",
-      title: "Web Development",
-      short: "Future-ready  frontend development for growing brands.",
-      details: [
-        "Custom-coded solutions tailored to your business needs.",
-        "Responsive, mobile-first layouts for every device.",
-        "Scalable architectures ready to grow with your brand.",
-        "API & third-party integrations for seamless workflows.",
-        "High-performance optimization ensuring speed & stability.",
-        "SEO-friendly code structure for better visibility.",
-        "Ongoing support & feature updates to keep you future-ready.",
-      ],
-      color: "text-white",
-    },
-    {
-      icon: "/deploy.webp",
-      title: "Deployment",
-      short: "From code to cloud — we handle smooth deployment.",
-      details: [
-        "End-to-end deployment across web, cloud, and mobile platforms.",
+    // {
+    //   icon: "/webd.webp",
+    //   title: "Web Design",
+    //   short: "We built futuristic design which impress and outstand.",
+    //   details: [
+    //     "Conversion-focused landing pages built to maximize leads.",
+    //     "Responsive, mobile-first layouts for every device.",
+    //     "Next-gen UI/UX design with smooth animations & interactions.",
+    //     "Lightning-fast performance optimized for Core Web Vitals.",
+    //     "SEO-ready architecture for better search visibility.",
+    //     "Brand-aligned aesthetics with modern visuals.",
+    //   ],
+    //   color: "text-white",
+    // },
+    // {
+    //   icon: "/wedev.png",
+    //   title: "Web Development",
+    //   short: "Future-ready  frontend development for growing brands.",
+    //   details: [
+    //     "Custom-coded solutions tailored to your business needs.",
+    //     "Responsive, mobile-first layouts for every device.",
+    //     "Scalable architectures ready to grow with your brand.",
+    //     "API & third-party integrations for seamless workflows.",
+    //     "High-performance optimization ensuring speed & stability.",
+    //     "SEO-friendly code structure for better visibility.",
+    //     "Ongoing support & feature updates to keep you future-ready.",
+    //   ],
+    //   color: "text-white",
+    // },
+    // {
+    //   icon: "/deploy.webp",
+    //   title: "Deployment",
+    //   short: "From code to cloud — we handle smooth deployment.",
+    //   details: [
+    //     "End-to-end deployment across web, cloud, and mobile platforms.",
 
-        "CI/CD pipelines for automated, reliable releases.",
+    //     "CI/CD pipelines for automated, reliable releases.",
         
-        "cloud hosting setup (AWS, Azure, GCP, or custom servers).",
+    //     "cloud hosting setup (AWS, Azure, GCP, or custom servers).",
         
-        "Zero-downtime rollouts with rollback safety.",
+    //     "Zero-downtime rollouts with rollback safety.",
         
-        "Environment configuration (dev, staging, production).",
+    //     "Environment configuration (dev, staging, production).",
         
-        "Containerization & orchestration (Docker, Kubernetes)"
-      ],
-      color: "text-white",
-    },
+    //     "Containerization & orchestration (Docker, Kubernetes)"
+    //   ],
+    //   color: "text-white",
+    // },
   
   ];
 
@@ -248,7 +248,7 @@ export default function ServicesNew() {
                   className="relative h-full"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
-                  onClick={() => setActiveIndex(index)}
+                  // onClick={() => setActiveIndex(index)}
                 >
                   <ParallaxCard intensity={10} className="h-full">
                     <div
