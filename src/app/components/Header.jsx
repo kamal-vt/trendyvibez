@@ -148,7 +148,7 @@ export default function Header() {
                 { href: "/", id: "mobile-home", type: "home", label: "Home" },
                 { href: "/services", id: "mobile-services", type: "services", label: "Services" },
                 { href: "/industries", id: "mobile-industries", type: "industries", label: "Industries" },
-                { href: "/resources", id: "mobile-resources", type: "resources", label: "Resources" },
+                // { href: "/resources", id: "mobile-resources", type: "resources", label: "Resources" },
                 { href: "/lets-talk", id: "mobile-lets-talk", type: "lets-talk", label: "Let’s Connect" },
               ].map(({ href, id, type, label }) => (
                 <Link

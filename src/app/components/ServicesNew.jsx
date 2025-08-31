@@ -172,7 +172,7 @@ export default function ServicesNew() {
   ];
 
   return (
-    <section ref={sectionRef} className="text-white py-16 sm:py-20 px-4 sm:px-6 bg-white relative w-full">
+    <section ref={sectionRef} className="text-white py-16 sm:py-10 px-4 sm:px-6 bg-white relative w-full">
       {/* Magnet Image with scroll movement */}
       <div 
         className="absolute top-10 right-1/4 z-10 pointer-events-none"

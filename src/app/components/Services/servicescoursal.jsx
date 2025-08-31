@@ -431,7 +431,7 @@ const ServicesCoursal = () => {
         </div>
 
         {/* Analytics Content Section */}
-        <div className="mt-20 w-9/12 m-auto mb-20">
+        <div className="mt-20 w-9/12 m-auto mb-10">
           <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
             {/* Main Heading */}
             <div className="text-center mb-12">

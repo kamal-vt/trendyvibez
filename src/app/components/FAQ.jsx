@@ -25,7 +25,7 @@ export default function FAQ() {
   return (
     <section 
       id="faq"
-      className="pb-6 px-6"
+      className="pb-10 px-6"
       style={{ backgroundColor: "#ffffff" }}
     >
       <div className="max-w-6xl mx-auto ">
