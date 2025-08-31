@@ -9,7 +9,7 @@ const servicesData = [
     stat: "ROI: 200%+",
     description:
       "SEO improves your website visibility, drives quality traffic, and increases your long-term revenue.",
-    illustration: "/images/seo.png",
+    illustration: "/images/s.png",
     features: [
       "Increased online visibility",
       "Higher quality traffic",
@@ -37,7 +37,7 @@ const servicesData = [
     stat: "Engagement + Growth",
     description:
       "Social media management ensures consistent posting, audience engagement, and community building.",
-    illustration: "/images/smmm.png",
+    illustration: "/images/sm.png",
     features: [
       "Stronger brand identity",
       "Increased engagement",
@@ -51,7 +51,7 @@ const servicesData = [
     stat: "Brand Equity",
     description:
       "Brand development shapes perception, builds trust, and differentiates your business in a crowded market.",
-    illustration: "/images/brand.png",
+    illustration: "/images/b.png",
     features: [
       "Defined identity and positioning",
       "Increased recognition",
