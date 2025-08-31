@@ -321,7 +321,7 @@ export default function LetsTalk() {
             Claim your free 30-minute strategy session — let's explore your goals
             and map out the smartest path to digital growth.
           </p>
-          <button className="group relative px-8 sm:px-8 md:px-10 py-4 sm:py-4 md:py-5 bg-gradient-to-r from-coral-pink to-dusty-rose hover:from-[#932d42] hover:to-[#1f2f77] text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-[#932d42]/25 hover:scale-105 text-base sm:text-base md:text-lg w-full sm:w-auto min-h-[48px] sm:min-h-0">
+          <button className="group relative px-8 sm:px-8 md:px-10 py-4 sm:py-4 md:py-5 text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-[#4A7CCA]/25 hover:scale-105 text-base sm:text-base md:text-lg w-full sm:w-auto min-h-[48px] sm:min-h-0" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}>
             <span className="relative z-10 flex items-center justify-center gap-3 sm:gap-3">
               Schedule Free Call
               <svg

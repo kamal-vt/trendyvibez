@@ -25,11 +25,11 @@ export default function FAQ() {
   return (
     <section 
       id="faq"
-      className="pb-10 px-6"
+      className="pb-6 px-6"
       style={{ backgroundColor: "#ffffff" }}
     >
       <div className="max-w-6xl mx-auto ">
-        <div className="flex items-center justify-center gap-6 mb-16">
+        <div className="flex items-center justify-center gap-6 mb-8">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
             Frequently Asked Questions
           </h2>
@@ -44,11 +44,11 @@ export default function FAQ() {
           />
         </div>
 
-        <div className="space-y-8 ">
+        <div className="space-y-6 ">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-[#ffffff] backdrop-blur-sm shadow rounded-xl p-8 border border-gray-200 transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 hover:shadow-2xl hover:shadow-gray-300/60 hover:border-gray-300"
+              className="bg-[#ffffff] backdrop-blur-sm shadow rounded-xl p-6 border border-gray-200 transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 hover:shadow-2xl hover:shadow-gray-300/60 hover:border-gray-300"
             >
               <h3 className="text-xl font-semibold text-orange-600 mb-2">
                 {faq.question}
