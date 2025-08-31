@@ -25,12 +25,12 @@ export default function FAQ() {
   return (
     <section 
       id="faq"
-      className="pb-6 px-6"
+      className="pb-8 px-6"
       style={{ backgroundColor: "#ffffff" }}
     >
       <div className="max-w-6xl mx-auto ">
-        <div className="flex items-center justify-center gap-6 mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+        <div className="flex items-center justify-center gap-6 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold  text-gray-800">
             Frequently Asked Questions
           </h2>
           

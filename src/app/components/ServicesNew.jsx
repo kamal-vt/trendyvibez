@@ -203,7 +203,7 @@ export default function ServicesNew() {
             <div className="bg-brand-card backdrop-blur-lg p-10 border border-white/30 shadow-2xl relative rounded-4xl">
               <button
                 onClick={() => setActiveIndex(null)}
-                className="absolute top-4 right-4 text-sm px-3 py-1 bg-[#4A7CCA] rounded-full hover:bg-[#4A7CCA] transition linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1"
+                className="absolute top-4 right-4 text-sm px-3  bg-[#4A7CCA] rounded-full hover:bg-[#4A7CCA] transition linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6  bg-[#4A7CCA]">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />

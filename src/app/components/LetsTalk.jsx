@@ -54,8 +54,8 @@ const testimonials = [
 ];
 
 const ContactCard = ({ icon, title, main, subtitle, button }) => (
-  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-black hover:border-white/40 transition-all duration-500 transform hover:scale-110 hover:shadow-2xl  flex flex-col group">
-    <div className="text-4xl mb-4 transition-transform duration-300 group-hover:scale-125">{icon}</div>
+  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-black hover:border-white/40 transition-all duration-500 transform hover:scale-110 hover:shadow-2xl  flex flex-col group overflow-hidden">
+    <div className="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">{icon}</div>
     <h3 className="text-xl text-black font-bold mb-2">{title}</h3>
     <p className="text-lg  text-black mb-1">{main}</p>
     <p className="text-black text-sm mb-4">{subtitle}</p>
