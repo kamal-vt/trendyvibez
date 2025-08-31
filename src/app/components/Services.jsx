@@ -51,7 +51,7 @@ const servicesData = [
     stat: "Brand Equity",
     description:
       "Brand development shapes perception, builds trust, and differentiates your business in a crowded market.",
-    illustration: "/images/b.png",
+    illustration: "/images/br.png",
     features: [
       "Defined identity and positioning",
       "Increased recognition",
