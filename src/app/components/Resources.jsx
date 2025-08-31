@@ -71,7 +71,7 @@ export default function Resources() {
   ];
 
   return (
-    <section ref={sectionRef} className="text-gray-800 py-10 px-4 sm:px-6 relative bg-white rounded-4xl w-full" style={{
+    <section ref={sectionRef} className="text-gray-800 py-5 px-4 sm:px-6 relative bg-white rounded-4xl w-full" style={{
       // background: 'linear-gradient(120deg, #ef4444, #8b5cf6, #3b82f6)'
     }}>
       {/* Zoom Image */}

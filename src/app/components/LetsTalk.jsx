@@ -321,8 +321,25 @@ export default function LetsTalk() {
             Claim your free 30-minute strategy session — let's explore your goals
             and map out the smartest path to digital growth.
           </p>
-          <button className="text-white px-8 py-4 rounded-lg font-semibold transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-[#CE82FF]/40 border-2 border-white/20" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }} onMouseEnter={(e) => e.target.style.background = 'linear-gradient(135deg, #4A7CCA, #213279)'} onMouseLeave={(e) => e.target.style.background = 'linear-gradient(135deg, #4A7CCA, #213279)'}>
-            Schedule Free Call
+          <button className="group relative px-8 sm:px-8 md:px-10 py-4 sm:py-4 md:py-5 bg-gradient-to-r from-coral-pink to-dusty-rose hover:from-[#932d42] hover:to-[#1f2f77] text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-[#932d42]/25 hover:scale-105 text-base sm:text-base md:text-lg w-full sm:w-auto min-h-[48px] sm:min-h-0">
+            <span className="relative z-10 flex items-center justify-center gap-3 sm:gap-3">
+              Schedule Free Call
+              <svg
+                className="w-5 h-5 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14M13 5l7 7-7 7"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+            <div className="absolute inset-0 bg-white/20 rounded-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
           </button>
         </div>
       </div>

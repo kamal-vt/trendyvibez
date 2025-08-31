@@ -73,7 +73,7 @@ export default function Impact() {
   return (
     <section ref={sectionRef} className="py-8 sm:py-3 px-4 sm:px-6 mt-3 bg-cream-100 relative w-full">
       {/* Rolling images */}
-      {showImages && (
+      {/* {showImages && (
         <>
           <div
             className={`${isFixed ? 'fixed' : 'absolute'} left-4 sm:left-8 z-50 pointer-events-none transition-all duration-300 ease-out hidden lg:block`}
@@ -88,10 +88,10 @@ export default function Impact() {
             <img src="/roll.png" alt="Rolling element" className="w-12 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 animate-spin" style={{ animationDuration: '6s' }} loading="lazy" />
           </div>
         </>
-      )}
+      )} */}
 
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <div className="mb-20">
+        <div className="mb-8">
           <div className="relative w-full max-w-4xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden"></div>
           </div>
