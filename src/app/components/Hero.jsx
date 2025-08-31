@@ -121,12 +121,12 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Button */}
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-6 sm:pt-8 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 rounded-2xl md:gap-6 pt-6 sm:pt-8 justify-center">
               <button
-                className="group relative px-8 sm:px-8 md:px-10 py-4 sm:py-4 md:py-5 bg-gradient-to-r from-coral-pink to-dusty-rose hover:from-[#932d42] hover:to-[#1f2f77] text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-[#932d42]/25 hover:scale-105 text-base sm:text-base md:text-lg w-full sm:w-auto min-h-[48px] sm:min-h-0"
+                className="group relative px-8 sm:px-8 md:px-10 py-4  sm:py-4 md:py-5 bg-gradient-to-r from-coral-pink to-dusty-rose hover:from-[#932d42] hover:to-[#1f2f77] text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-[#932d42]/25 hover:scale-105 text-base sm:text-base md:text-lg w-full sm:w-auto min-h-[48px] sm:min-h-0"
                 onClick={() => router.push("/lets-talk")}
               >
-                <span className="relative z-10 flex items-center justify-center gap-3 sm:gap-3">
+                <span className="relative z-10 flex items-center rounded-2xl justify-center gap-3 sm:gap-3">
                   DISCOVER NOW
                   <svg
                     className="w-5 h-5 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1"
@@ -143,7 +143,7 @@ export default function HeroSection() {
                     />
                   </svg>
                 </span>
-                <div className="absolute inset-0 bg-white/20 rounded-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                {/* <div className="absolute inset-0 bg-white/10 rounded-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div> */}
               </button>
             </div>
 
