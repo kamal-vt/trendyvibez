@@ -7,17 +7,17 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "luc
 
 const Footer = () => {
   return (
-    <footer className="bg-[#00FFFF]  text-black rounded-t-[30px] sm:rounded-t-[50px] pt-10 b-4 overflow-hidden">
+    <footer className="rounded-t-[30px] sm:rounded-t-[50px] pt-10 b-4 overflow-hidden" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}>
       {/* Background Glows as part of the layout */}
       <div className="flex justify-between items-center ">
-        <div className="w-[400px]  rounded-full bg-[#c6186e]/20 blur-[120px]" />
-        <div className="w-[400px] rounded-full bg-[#3d3ed3]/20 blur-[140px]" />
+        <div className="w-[400px]  rounded-full bg-white/10 blur-[120px]" />
+        <div className="w-[400px] rounded-full bg-white/10 blur-[140px]" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 text-black/90">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 text-white/90">
           {/* Column 1: Logo + Socials */}
           <div className="flex flex-col items-center md:items-start">
             <motion.div
@@ -68,7 +68,7 @@ const Footer = () => {
                   { name: "Terms and conditions", href: "/" },
                 ].map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="hover:text-black transition-colors">
+                    <Link href={link.href} className="hover:text-white transition-colors">
                       {link.name}
                     </Link>
                   </li>
@@ -93,7 +93,7 @@ const Footer = () => {
                   "Web design",
                 ].map((name) => (
                   <li key={name}>
-                    <Link href="/services" className="hover:text-black transition-colors">
+                    <Link href="/services" className="hover:text-white/80 transition-colors">
                       {name}
                     </Link>
                   </li>
@@ -108,17 +108,17 @@ const Footer = () => {
               <h4 className="text-sm font-semibold mb-6 uppercase tracking-widest mt-2">
                 Contact Us
               </h4>
-              <div className="space-y-4 text-sm text-black/80">
+              <div className="space-y-4 text-sm text-white/80">
                 <div className="flex items-center gap-3">
-                  <Phone size={18} className="text-black/70 mt-2" />
+                  <Phone size={18} className="text-white/70 mt-2" />
                   <span>+91 7207376333</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail size={18} className="text-black/70" />
+                  <Mail size={18} className="text-white/70" />
                   <span>trendyvibez.in@gmail.com</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <MapPin size={18} className="mt-1 text-black/70" />
+                  <MapPin size={18} className="mt-1 text-white/70" />
                   <span>
                     Cyber Towers,<br />
                     3rd Quadrant, 1st Floor, HITEC City,<br />
@@ -131,7 +131,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 py-5 sm:mt-12 pt-6 border-t border-white/10 flex flex-col items-center justify-between gap-4 text-black text-xs md:text-sm">
+        <div className="mt-8 py-5 sm:mt-12 pt-6 border-t border-white/10 flex flex-col items-center justify-between gap-4 text-white text-xs md:text-sm">
           <p>© 2025 Trendy Vibes. All rights reserved.</p>
           {/* <div className="flex items-center gap-6">
             <Link href="/services" className="hover:text-white">Privacy Policy</Link>
