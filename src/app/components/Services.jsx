@@ -9,7 +9,7 @@ const servicesData = [
     stat: "ROI: 200%+",
     description:
       "SEO improves your website visibility, drives quality traffic, and increases your long-term revenue.",
-    illustration: "/images/seoimg.jpg",
+    illustration: "/images/seo.png",
     features: [
       "Increased online visibility",
       "Higher quality traffic",
@@ -23,7 +23,7 @@ const servicesData = [
     stat: "Instant Leads",
     description:
       "Paid advertising delivers instant exposure, leads, and measurable results across Google, social media, and display networks.",
-    illustration: "/images/paidimg.jpg",
+    illustration: "/images/ads.png",
     features: [
       "Instant visibility and reach",
       "Precise audience targeting",
@@ -37,7 +37,7 @@ const servicesData = [
     stat: "Engagement + Growth",
     description:
       "Social media management ensures consistent posting, audience engagement, and community building.",
-    illustration: "/images/smm.jpg",
+    illustration: "/images/smmm.png",
     features: [
       "Stronger brand identity",
       "Increased engagement",
@@ -51,7 +51,7 @@ const servicesData = [
     stat: "Brand Equity",
     description:
       "Brand development shapes perception, builds trust, and differentiates your business in a crowded market.",
-    illustration: "/images/brandimg.jpg",
+    illustration: "/images/brand.png",
     features: [
       "Defined identity and positioning",
       "Increased recognition",
@@ -79,7 +79,7 @@ const servicesData = [
     stat: "Insights = Growth",
     description:
       "Analytics provides insights across campaigns, channels, and website performance to optimize results.",
-    illustration: "/images/servicesimg.jpg",
+    illustration: "/images/anal.png",
     features: [
       "Performance clarity",
       "Data-driven decisions",
