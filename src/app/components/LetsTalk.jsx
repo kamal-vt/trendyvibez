@@ -145,7 +145,7 @@ export default function LetsTalk() {
          <div
            className="rounded-3xl p-1 border  border-white/20 min-h-[400px] transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 "
          >
-           <div className="bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e]  backdrop-blur-sm rounded-3xl p-8 h-full">
+           <div className="backdrop-blur-sm rounded-3xl p-8 h-full" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}>
             <div className="grid lg:grid-cols-2 gap-12 ">
               {/* Form */}
               <div className=' rounded-2xl p-4'>
@@ -247,7 +247,7 @@ export default function LetsTalk() {
                 </div> */}
 
                 {/* Testimonials */}
-                <div className=" backdrop-blur-sm rounded-2xl p-6 text-white border  border-white/20">
+                <div className="backdrop-blur-sm rounded-2xl p-6 text-white border border-white/20" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}>
                   <h4 className="text-2xl font-bold mb-4 text-[#ffffff]">What Clients Say</h4>
                   <div className="space-y-4">
                     {testimonials.map((testimonial, index) => (
@@ -266,7 +266,7 @@ export default function LetsTalk() {
                 </div>
 
                 {/* Stats */}
-                <div className=" backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <div className="backdrop-blur-sm rounded-2xl p-6 border border-white/20" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}>
                   <h4 className="text-xl font-bold mb-4 text-white">Our Impact</h4>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center">
@@ -321,7 +321,7 @@ export default function LetsTalk() {
             Claim your free 30-minute strategy session — let's explore your goals
             and map out the smartest path to digital growth.
           </p>
-          <button className="bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] hover:bg-[#e68a00] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-[color:var(--tv-500)]/40 border-2 border-[var(--tv-accent)]">
+          <button className="text-white px-8 py-4 rounded-lg font-semibold transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-[#CE82FF]/40 border-2 border-white/20" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }} onMouseEnter={(e) => e.target.style.background = 'linear-gradient(135deg, #4A7CCA, #213279)'} onMouseLeave={(e) => e.target.style.background = 'linear-gradient(135deg, #4A7CCA, #213279)'}>
             Schedule Free Call
           </button>
         </div>

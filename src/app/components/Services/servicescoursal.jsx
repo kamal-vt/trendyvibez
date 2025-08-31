@@ -5,7 +5,7 @@ const ServicesCoursal = () => {
     <>
             {/* SEO Content Section */}
             <div className="mt-20 w-9/12 m-auto">
-          <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] border-black rounded-3xl p-8 md:p-12 shadow-2xl">
+          <div className="border-black rounded-3xl p-8 md:p-12 shadow-2xl" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}>
             {/* Main Heading */}
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-[#eaecf0] mb-6">
@@ -90,7 +90,7 @@ const ServicesCoursal = () => {
 
         {/* Paid Advertising Content Section */}
         <div className="mt-20 w-9/12 m-auto">
-          <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] backdrop-blur-sm rounded-3xl p-8 md:p-12 border text-black border-white/20">
+          <div className="backdrop-blur-sm rounded-3xl p-8 md:p-12 border text-black border-white/20" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}>
             {/* Main Heading */}
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-[#f2f3f6] mb-6">
@@ -174,7 +174,7 @@ const ServicesCoursal = () => {
 
         {/* Social Media Management Content Section */}
         <div className="mt-20 w-9/12 m-auto">
-          <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
+          <div className="backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}>
             {/* Main Heading */}
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -258,7 +258,7 @@ const ServicesCoursal = () => {
 
         {/* Brand Development Content Section */}
         <div className="mt-20 w-9/12 m-auto">
-          <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
+          <div className="backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}>
             {/* Main Heading */}
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -345,7 +345,7 @@ const ServicesCoursal = () => {
 
         {/* Content Strategy Content Section */}
         <div className="mt-20 w-9/12 m-auto">
-          <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
+          <div className="backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}>
             {/* Main Heading */}
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-[#ffffff] mb-6">
@@ -432,7 +432,7 @@ const ServicesCoursal = () => {
 
         {/* Analytics Content Section */}
         <div className="mt-20 w-9/12 m-auto mb-10">
-          <div className=" bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
+          <div className="backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20" style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}>
             {/* Main Heading */}
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">

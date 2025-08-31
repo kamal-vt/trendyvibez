@@ -99,7 +99,8 @@ const ServicesPage = () => {
         {servicesData.map((service, index) => (
           <div
             key={index}
-            className="sticky top-[120px] bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] rounded-3xl p-6 md:p-12 shadow-2xl"
+            className="sticky top-[120px] rounded-3xl p-6 md:p-12 shadow-2xl"
+            style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}
           >
             <div className="grid md:grid-cols-2 gap-8">
               {/* Left - Illustration */}

@@ -152,9 +152,10 @@ export default function Industries() {
               onMouseLeave={() => setHoveredCard(null)}
             >
               <div
-                className={`p-6 sm:p-8 rounded-3xl bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e] text-white shadow-xl backdrop-blur-lg border border-white/20 transition-all duration-300 ${
+                className={`p-6 sm:p-8 rounded-3xl text-white shadow-xl backdrop-blur-lg border border-white/20 transition-all duration-300 ${
                   hoveredCard === index ? "shadow-2xl shadow-white/20" : ""
                 }`}
+                style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}
               >
                 <div className="text-center mb-6">
                   <div className="text-3xl sm:text-4xl mb-4">{industry.icon}</div>
