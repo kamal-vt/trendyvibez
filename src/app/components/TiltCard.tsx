@@ -94,6 +94,7 @@ export default function TiltCard({
         src={imageSrc}
         alt={title || 'Card image'}
         className="w-full object-cover rounded-xl transition-transform duration-300 ease-out group-hover:scale-105"
+        loading="lazy"
       />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out rounded-xl">

@@ -61,7 +61,7 @@ export default function Header() {
           {/* Logo */}
           <div className="w-1/3">
             <Link href="/" className="flex items-center shrink-0 ">
-              <img src="/5.png" alt="Trendy Vibe logo" className=" w-42 rounded" />
+              <img src="/5.png" alt="Trendy Vibe logo" className=" w-42 rounded" loading="lazy" />
               {/* <span className="text-xl md:text-2xl font-extrabold text-[#494949] tracking-tight">Trendy Vibes</span> */}
             </Link></div>
 

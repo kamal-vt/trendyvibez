@@ -76,16 +76,16 @@ export default function Impact() {
       {showImages && (
         <>
           <div
-            className={`${isFixed ? 'fixed' : 'absolute'} left-4 sm:left-8 z-50 pointer-events-none transition-all duration-300 ease-out`}
+            className={`${isFixed ? 'fixed' : 'absolute'} left-4 sm:left-8 z-50 pointer-events-none transition-all duration-300 ease-out hidden md:block`}
             style={{ top: isFixed ? `${navbarHeight+20}px` : '1rem', opacity }}
           >
-            <img src="/roll.png" alt="Rolling element" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 animate-spin" style={{ animationDuration: '8s' }} />
+            <img src="/roll.png" alt="Rolling element" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 animate-spin" style={{ animationDuration: '8s' }} loading="lazy" />
           </div>
           <div
-            className={`${isFixed ? 'fixed' : 'absolute'} right-4 sm:right-8 z-50 pointer-events-none transition-all duration-300 ease-out`}
+            className={`${isFixed ? 'fixed' : 'absolute'} right-4 sm:right-8 z-50 pointer-events-none transition-all duration-300 ease-out hidden md:block`}
             style={{ top: isFixed ? `${navbarHeight+20}px` : '1rem', opacity }}
           >
-            <img src="/roll.png" alt="Rolling element" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 animate-spin" style={{ animationDuration: '6s' }} />
+            <img src="/roll.png" alt="Rolling element" className="w-12 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 animate-spin" style={{ animationDuration: '6s' }} loading="lazy" />
           </div>
         </>
       )}

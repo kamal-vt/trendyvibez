@@ -110,6 +110,7 @@ const ServicesPage = () => {
                       src={service.illustration}
                       alt={service.title}
                       className="w-full h-full object-cover object-center"
+                      loading="lazy"
                     />
                   </div>
                 ) : (

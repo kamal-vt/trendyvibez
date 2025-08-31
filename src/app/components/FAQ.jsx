@@ -40,6 +40,7 @@ export default function FAQ() {
             alt="Decorative ball" 
             className="w-16 h-16 md:w-20 md:h-20 object-contain filter drop-shadow-lg animate-spin"
             style={{ animationDuration: '8s' }}
+            loading="lazy"
           />
         </div>
 

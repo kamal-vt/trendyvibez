@@ -101,6 +101,7 @@ export default function TiltCardSection() {
                     src={img.src}
                     alt={img.title}
                     className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                    loading="lazy"
                   />
                 </div>
                 <div className="flex-1">

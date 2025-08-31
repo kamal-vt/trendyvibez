@@ -86,6 +86,7 @@ export default function Resources() {
           src="/zoom.png" 
           alt="Zoom decoration" 
           className="w-16 h-16 md:w-20 md:h-20 object-contain"
+          loading="lazy"
         />
       </div>
       
@@ -123,6 +124,7 @@ export default function Resources() {
                           src={resource.icon} 
                           alt={resource.title}
                           className="w-24 h-24 mx-auto object-contain"
+                          loading="lazy"
                         />
                       ) : (
                         resource.icon

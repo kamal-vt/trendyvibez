@@ -215,6 +215,7 @@ export default function ServicesNew() {
                     src={services[activeIndex].icon}
                     alt={services[activeIndex].title}
                     className="w-36 h-36 object-contain"
+                    loading="lazy"
                   />
                 </div>
                 <div className="flex-1">
@@ -262,6 +263,7 @@ export default function ServicesNew() {
                           src={service.icon}
                           alt={service.title}
                           className="w-44 h-36 object-contain"
+                          loading="lazy"
                         />
                       </div>
                       <div className="flex-1 flex flex-col">
