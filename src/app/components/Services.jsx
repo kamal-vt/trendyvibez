@@ -99,14 +99,14 @@ const ServicesPage = () => {
         {servicesData.map((service, index) => (
           <div
             key={index}
-            className="sticky top-[120px] rounded-3xl p-6 md:p-12 shadow-2xl"
+             className="sticky top-[120px] rounded-3xl p-4 md:p-12 shadow-2xl"
             style={{ background: 'linear-gradient(135deg, #4A7CCA, #213279)' }}
           >
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-8">
               {/* Left - Illustration */}
               <div className="flex items-center justify-center object-contain">
                 {service.illustration.startsWith("/") ? (
-                  <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 flex items-center justify-center overflow-hidden rounded-2xl shadow-lg bg-gray-100">
+                  <div className="w-32 h-32 md:w-64 md:h-64 lg:w-72 lg:h-72 flex items-center justify-center overflow-hidden rounded-2xl shadow-lg bg-gray-100">
                     <img
                       src={service.illustration}
                       alt={service.title}
@@ -115,26 +115,26 @@ const ServicesPage = () => {
                     />
                   </div>
                 ) : (
-                  <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 flex items-center justify-center text-6xl">
+                  <div className="w-32 h-32 md:w-64 md:h-64 lg:w-72 lg:h-72 flex items-center justify-center text-6xl">
                     {service.illustration}
                   </div>
                 )}
               </div>
 
               {/* Right - Content */}
-              <div className="flex flex-col justify-start space-y-4 text-white">
-                <h3 className="text-2xl md:text-3xl font-bold">{service.title}</h3>
-                <p className="text-lg">{service.tagline}</p>
-                <div className="text-xl font-bold text-coral-pink">{service.stat}</div>
-                <p className="text-gray-200 leading-relaxed">{service.description}</p>
-                <div className="space-y-2">
+              <div className="flex flex-col justify-start space-y-2 md:space-y-4 text-white">
+                <h3 className="text-xl md:text-3xl font-bold">{service.title}</h3>
+                <p className="text-base md:text-lg">{service.tagline}</p>
+                <div className="text-lg md:text-xl font-bold text-coral-pink">{service.stat}</div>
+                <p className="text-sm md:text-base text-gray-200 leading-relaxed">{service.description}</p>
+                <div className="space-y-1 md:space-y-2">
                   {service.features.map((feature, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center space-x-2 bg-white/10 p-2 rounded-lg"
+                      className="flex items-center space-x-2 bg-white/10 p-1.5 md:p-2 rounded-lg"
                     >
                       <span className="text-coral-pink">⭐</span>
-                      <span>{feature}</span>
+                      <span className="text-sm md:text-base">{feature}</span>
                     </div>
                   ))}
                 </div>
