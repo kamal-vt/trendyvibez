@@ -224,11 +224,12 @@ export default function LetsTalk() {
                       value={formData.budget}
                       onChange={handleInputChange}
                     >
-                      <option value="" className="bg-white text-black">Select budget range</option>
-                      <option value="5k-10k" className="bg-white text-black">$5K - $10K</option>
-                      <option value="10k-25k" className="bg-white text-black">$10K - $25K</option>
-                      <option value="25k-50k" className="bg-white text-black">$25K - $50K</option>
-                      <option value="50k+" className="bg-white text-black">$50K+</option>
+                     <option value="" className="bg-white text-black">Select budget range</option>
+<option value="15k-30k" className="bg-white text-black">₹15,000 – ₹30,000 </option>
+<option value="30k-75k" className="bg-white text-black">₹30,000 – ₹75,000</option>
+<option value="75k-1.5L" className="bg-white text-black">₹75,000 – ₹1,50,000 </option>
+<option value="1.5L+" className="bg-white text-black">₹1,50,000+ </option>
+
                     </Field>
                   </div>
 
