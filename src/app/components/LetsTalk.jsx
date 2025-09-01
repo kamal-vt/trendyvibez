@@ -75,14 +75,20 @@ const Field = ({ label, as, children, ...props }) => (
     {as === 'textarea' ? (
       <textarea
         {...props}
-        className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-white focus:outline-none focus:border-blue-400 transition-all duration-300 resize-none"
+        className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-white focus:outline-none focus:border-blue-400 focus:bg-white focus:text-black transition-all duration-300 resize-none"
+        style={{
+          backgroundColor: props.value ? 'white' : 'rgba(255, 255, 255, 0.2)',
+          color: props.value ? 'black' : 'white'
+        }}
       ></textarea>
     ) : as === 'select' ? (
       <select
         {...props}
-        className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-400 transition-all duration-300 [&>option]:bg-gray-800 [&>option]:text-white [&>option]:py-2"
+        className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-400 focus:bg-white focus:text-black transition-all duration-300 [&>option]:bg-gray-800 [&>option]:text-white [&>option]:py-2"
         style={{
-          colorScheme: 'dark'
+          colorScheme: 'dark',
+          backgroundColor: props.value ? 'white' : 'rgba(255, 255, 255, 0.2)',
+          color: props.value ? 'black' : 'white'
         }}
       >
         {children}
@@ -90,7 +96,11 @@ const Field = ({ label, as, children, ...props }) => (
     ) : (
       <input
         {...props}
-        className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-white focus:outline-none focus:border-blue-400 transition-all duration-300"
+        className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-white focus:outline-none focus:border-blue-400 focus:bg-white focus:text-black transition-all duration-300"
+        style={{
+          backgroundColor: props.value ? 'white' : 'rgba(255, 255, 255, 0.2)',
+          color: props.value ? 'black' : 'white'
+        }}
       />
     )}
   </div>

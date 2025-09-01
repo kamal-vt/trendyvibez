@@ -54,7 +54,7 @@ export async function POST(request) {
 
     return Response.json({ 
       success: true, 
-      message: 'Form submitted successfully!' 
+      message: 'submitted successfully!' 
     });
 
   } catch (error) {
