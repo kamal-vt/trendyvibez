@@ -25,11 +25,19 @@ export default function Home() {
         }}
       >
         <Hero />
-        <Impact />
-        <TiltCardSection />
-        <ServicesNew />
+        <div className="content-wrap">
+          <Impact />
+        </div>
+        <div className="content-wrap">
+          <TiltCardSection />
+        </div>
+        <div className="content-wrap">
+          <ServicesNew />
+        </div>
         {/* <Resources /> */}
-        <FAQ />
+        <div className="content-wrap">
+          <FAQ />
+        </div>
       </div>
     </>
   );

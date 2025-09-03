@@ -377,3 +377,18 @@ html, body {
   animation: heroZoom 8s ease-in-out infinite;
   will-change: transform;
 }
+
+/* Ultra-wide content cap (≥1920px) */
+.content-wrap {
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+@media (min-width: 1920px) {
+  .content-wrap {
+    max-width: 80rem; /* 1280px */
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

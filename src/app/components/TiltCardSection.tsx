@@ -61,7 +61,7 @@ export default function TiltCardSection() {
         >
           {images.map((img, idx) => {
             const { x, y } = getCardOffset();
-            const baseOffset = idx * 200;
+            const baseOffset = (idx - (images.length - 1) / 2) * 200; // symmetric spread from center
             const rotation = (idx - (images.length - 1) / 2) * 5;
 
             // --- Neighbor influence calculation ---
@@ -76,9 +76,9 @@ export default function TiltCardSection() {
               <div
                 key={idx}
                 onMouseEnter={() => setHoverIndex(idx)}
-                className="absolute left-36 transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
+                className="absolute left-1/2 transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
                 style={{
-                  transform: `translate3d(${x + baseOffset}px, ${y}px, 0) rotate(${rotation}deg) scale(${scale})`,
+                  transform: `translate(-50%, 0) translate3d(${x + baseOffset}px, ${y}px, 0) rotate(${rotation}deg) scale(${scale})`,
                   zIndex: images.length - idx,
                 }}
               >

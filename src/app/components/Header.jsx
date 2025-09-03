@@ -57,7 +57,7 @@ export default function Header() {
     <div className="fixed top-0 left-0 z-50 w-full">
       {/* Fixed Header */}
       <header className="p-2  bg-white/90 backdrop-blur  supports-backdrop-blur:bg-white/70 text-black shadow ">
-        <div className="w-11/12 m-auto flex items-center ">
+        <div className="w-11/12 m-auto flex items-center 3xl:max-w-7xl 3xl:px-8">
           {/* Logo */}
           <div className="w-1/3">
             <Link href="/" className="flex items-center shrink-0 ">
