@@ -30,10 +30,10 @@ const Footer = () => {
 
             <div className="flex items-center gap-3 sm:gap-4 ml-4 md:ml-6">
               {[
-                { icon: Linkedin, href: "https://www.linkedin.com/company/trendy-vibes", color: "hover:text-blue-600" },
-                { icon: Facebook, href: "https://www.facebook.com/trendyvibes", color: "hover:text-blue-500" },
-                { icon: Instagram, href: "https://www.instagram.com/trendyvibes", color: "hover:text-pink-500" },
-                { icon: Twitter, href: "https://twitter.com/trendyvibes", color: "hover:text-sky-400" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/trendibes", color: "hover:text-blue-600" },
+                { icon: Facebook, href: "https://www.facebook.com/trendyves", color: "hover:text-blue-500" },
+                { icon: Instagram, href: "https://www.instagram.cos", color: "hover:text-pink-500" },
+                { icon: Twitter, href: "https://twitter.com/trendybes", color: "hover:text-sky-400" },
               ].map((social, i) => (
                 <motion.a
                   key={i}

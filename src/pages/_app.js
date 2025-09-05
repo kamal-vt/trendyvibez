@@ -1,4 +1,5 @@
 import '../app/globals.css'
+import { Analytics } from '@vercel/analytics/next'
 import GSAPAnimations from '../app/components/GSAPAnimations'
 import PageTransition from '../app/components/PageTransition'
 import Header from '../app/components/Header'
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }) {
         
           <Footer />
         </div>
+        <Analytics />
       </PageTransition>
     // {/* </GSAPAnimations> */}
   )
